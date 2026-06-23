@@ -1,0 +1,7 @@
+# Work log — 2026-06-23
+Project: /Users/joseantoniolicon/Code/spyderboy
+Worker: 3/8
+
+## Task 4: Create Project type and export typed projects array with all five projects including name, status, oneliner, tags, and icon fields — touches: `lib/projects.ts` — done when: five Project objects export correctly with all fields typed, getStatusClasses(status) utility returns correct Tailwind classes for all four status values
+
+## Task 12: Create WhyBuilt component with large opening statement, four body paragraphs, and pull quote with left border — touches: `components/WhyBuilt.tsx` — done when: all copy from VISION.md Why section renders, pull quote has border-l-2 border-gray-300 pl-5 treatment

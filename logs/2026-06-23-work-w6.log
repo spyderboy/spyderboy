@@ -1,0 +1,7 @@
+# Work log — 2026-06-23
+Project: /Users/joseantoniolicon/Code/spyderboy
+Worker: 6/8
+
+## Task 7: Create StatCard component accepting label and value props — touches: `components/StatCard.tsx` — done when: renders muted small label above large medium-weight value, uses Tailwind bg-gray-50 card style
+
+## Task 15: Add responsive single-column mobile layout to ProjectGrid — touches: `components/ProjectGrid.tsx` — done when: cards stack in single column below md breakpoint, Podomus card stacks vertically on mobile

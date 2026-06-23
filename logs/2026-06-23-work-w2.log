@@ -1,0 +1,13 @@
+# Work log — 2026-06-23
+Project: /Users/joseantoniolicon/Code/spyderboy
+Worker: 2/8
+
+## Task 3: Create Netlify config with Next.js build command and plugin — touches: `netlify.toml` — done when: file has [build] command="npm run build" and [[plugins]] package="@netlify/plugin-nextjs"
+
+### Attempt 1
+Files changed: netlify.toml
+Validation: PASSED
+Analyzing spyderboy...                                          
+No issues found! (ran in 0.8s)
+
+## Task 11: Create EngineSection component with two-column layout on md+ — touches: `components/EngineSection.tsx` — done when: left column has h2 Xanadu title and two description paragraphs, right column renders three StatCard components from ENGINE_STATS

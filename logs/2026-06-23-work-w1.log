@@ -1,0 +1,7 @@
+# Work log — 2026-06-23
+Project: /Users/joseantoniolicon/Code/spyderboy
+Worker: 1/8
+
+## Task 2: Update root layout with Inter font, page title "Spyderboy Studio", description, and OG meta tags — touches: `app/layout.tsx` — done when: layout exports metadata with title, description, openGraph title/description/url, and twitter card fields
+
+## Task 10: Create ProjectGrid component rendering all projects from props — touches: `components/ProjectGrid.tsx` — done when: first four cards in md:grid-cols-2 grid, fifth card (Podomus) has col-span-2 and horizontal flex layout on md+

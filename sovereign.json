@@ -1,0 +1,10 @@
+{
+  "project": "spyderboy",
+  "stack": "nextjs",
+  "vision": "VISION.md",
+  "roadmap": "ROADMAP.md",
+  "rules": ".roorules",
+  "validator": "npm run build",
+  "logs_dir": "logs",
+  "registered": "2026-06-23"
+}

@@ -1,0 +1,15 @@
+# Work log — 2026-06-23
+Project: /Users/joseantoniolicon/Code/spyderboy
+Worker: 0/8
+
+## Task 1: Add scroll-behavior smooth to html element and verify Tailwind directives are present — touches: `app/globals.css` — done when: globals.css has @tailwind base/components/utilities and html selector with scroll-behavior smooth
+
+### Attempt 1
+Files changed: app/globals.css
+Validation: PASSED
+Analyzing spyderboy...                                          
+No issues found! (ran in 0.8s)
+
+## Task 9: Create ProjectCard component accepting a Project prop — touches: `components/ProjectCard.tsx` — done when: renders icon emoji or placeholder, status badge with correct color classes from getStatusClasses, h3 title, description, and tag pills. Hover darkens border.
+
+## Task 17: Audit full page for TypeScript errors and fix all — touches: any file with type errors — done when: npm run build completes with zero type errors

@@ -1,0 +1,7 @@
+# Work log — 2026-06-23
+Project: /Users/joseantoniolicon/Code/spyderboy
+Worker: 7/8
+
+## Task 8: Create Hero component with eyebrow, four-line h1 headline, subhead paragraph, and two anchor CTA buttons — touches: `components/Hero.tsx` — done when: all copy from VISION.md renders correctly, buttons link to #projects and #engine
+
+## Task 16: Add responsive layout to EngineSection so stat cards stack below text on mobile — touches: `components/EngineSection.tsx` — done when: single column below md, two columns on md+

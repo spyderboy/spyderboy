@@ -1,0 +1,7 @@
+# Work log — 2026-06-23
+Project: /Users/joseantoniolicon/Code/spyderboy
+Worker: 5/8
+
+## Task 6: Create Nav component with spyderboy wordmark and three anchor nav links — touches: `components/Nav.tsx` — done when: renders logo text and links to #projects #engine #why, mobile-friendly layout with flex wrap
+
+## Task 14: Assemble main page importing all components and passing correct props — touches: `app/page.tsx` — done when: page renders Nav, section#projects with ProjectGrid, section#engine with EngineSection, section#why with WhyBuilt, Footer — all sections separated by border-t

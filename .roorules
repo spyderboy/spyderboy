@@ -1,0 +1,82 @@
+# spyderboy.com — Coding Rules for Xanadu Executor
+
+## Stack
+- Next.js 14+ App Router (not Pages Router)
+- TypeScript strict mode — all files must be .tsx or .ts
+- Tailwind CSS — utility classes only, no inline styles, no CSS modules
+- next/font for Inter
+- next/image for all <img> elements
+
+## Project Structure
+```
+app/
+  layout.tsx        ← root layout, metadata, font setup
+  page.tsx          ← main page, assembles all sections
+  globals.css       ← Tailwind base/components/utilities + scroll-behavior: smooth
+components/
+  Nav.tsx
+  Hero.tsx
+  ProjectCard.tsx
+  ProjectGrid.tsx
+  EngineSection.tsx
+  StatCard.tsx
+  WhyBuilt.tsx
+  Footer.tsx
+lib/
+  projects.ts       ← project data array with types
+  constants.ts      ← nav links, engine stats, contact info
+public/
+  (images, favicon)
+netlify.toml
+```
+
+## Component Rules
+- Every component is a default export React functional component
+- Props typed with a TypeScript interface in the same file
+- No `any` types
+- No class components
+- Use "use client" only when interactivity is required — prefer server components
+- No useState for decorative effects — use Tailwind hover:/focus: utilities
+
+## Tailwind Rules
+- Utility classes only — no inline style attributes
+- Mobile-first responsive: default = mobile, md: = 768px, lg: = 1024px
+- Font weights: font-normal (400) and font-medium (500) only
+- Status badge classes:
+  - Live: bg-green-100 text-green-800
+  - Coming soon: bg-amber-100 text-amber-800
+  - In development: bg-blue-100 text-blue-800
+  - Moonshot: bg-purple-100 text-purple-800
+
+## Data Rules
+- All project data in lib/projects.ts as a typed array
+- All constants (nav, stats, contact) in lib/constants.ts
+- page.tsx imports data and passes as props — components never import lib/ directly
+
+## TypeScript Rules
+- npm run build must pass with zero errors
+- All arrays typed (e.g. Project[])
+- Use const unless reassignment needed
+
+## Accessibility
+- Heading hierarchy: h1 in Hero, h2 for section titles, h3 for card titles
+- All images have descriptive alt text
+- Nav links are <a> elements with href anchors
+
+## Smooth Scroll
+- html { scroll-behavior: smooth } in globals.css
+- Nav links: href="#projects", href="#engine", href="#why"
+- Sections have matching id attributes
+
+## Netlify
+- netlify.toml at project root
+- Build command: npm run build
+- Publish directory: .next
+- Include @netlify/plugin-nextjs
+
+## Anti-patterns — never do these
+- Never use CSS modules
+- Never hardcode copy in components — text from props or lib/constants.ts
+- Never use <img> — always next/image
+- Never stub or use TODO comments — every task must be complete and functional
+- Never use font-semibold or font-bold

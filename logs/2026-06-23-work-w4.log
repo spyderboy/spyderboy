@@ -1,0 +1,13 @@
+# Work log — 2026-06-23
+Project: /Users/joseantoniolicon/Code/spyderboy
+Worker: 4/8
+
+## Task 5: Create constants file with NAV_LINKS array, ENGINE_STATS array, and CONTACT object — touches: `lib/constants.ts` — done when: NAV_LINKS has three items (work/engine/contact with href anchors), ENGINE_STATS has three items (label+value), CONTACT has linkedin/twitter/email strings
+
+### Attempt 1
+Files changed: lib/constants.ts
+Validation: PASSED
+Analyzing spyderboy...                                          
+No issues found! (ran in 0.8s)
+
+## Task 13: Create Footer component with name/year left and contact links right separated by top border — touches: `components/Footer.tsx` — done when: renders border-t, left side "Jose Antonio Licon · Pittsburgh · 2026", right side three links to LinkedIn/Twitter/email from CONTACT constant
