@@ -7,13 +7,19 @@ import Footer from '@/components/Footer';
 
 export default function Home() {
   return (
-    <main className="max-w-3xl mx-auto px-6">
-      <Nav />
-      <Hero />
-      <ProjectGrid />
-      <EngineSection />
-      <WhyBuilt />
-      <Footer />
-    </main>
+    <>
+      <div className="bg-[#0f0f0f]">
+        <div className="max-w-3xl mx-auto px-6">
+          <Nav dark />
+          <Hero />
+        </div>
+      </div>
+      <main className="max-w-3xl mx-auto px-6">
+        <ProjectGrid />
+        <EngineSection />
+        <WhyBuilt />
+        <Footer />
+      </main>
+    </>
   );
 }

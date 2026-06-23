@@ -1,15 +1,25 @@
 import { NAV_LINKS } from '@/lib/constants';
 
-export default function Nav() {
+interface NavProps {
+  dark?: boolean;
+}
+
+export default function Nav({ dark = false }: NavProps) {
   return (
-    <nav className="flex justify-between items-center py-6 border-b border-gray-100">
-      <span className="text-[15px] font-medium tracking-tight">spyderboy</span>
+    <nav className="flex justify-between items-center py-6">
+      <span className={`text-[15px] font-medium tracking-tight ${dark ? 'text-white' : 'text-gray-900'}`}>
+        spyderboy
+      </span>
       <div className="flex gap-6">
         {NAV_LINKS.map((link) => (
           <a
             key={link.href}
             href={link.href}
-            className="text-sm text-gray-500 hover:text-gray-900 transition-colors"
+            className={`text-sm transition-colors ${
+              dark
+                ? 'text-zinc-500 hover:text-zinc-200'
+                : 'text-gray-400 hover:text-gray-900'
+            }`}
           >
             {link.label}
           </a>

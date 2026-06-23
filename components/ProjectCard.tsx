@@ -13,31 +13,23 @@ export default function ProjectCard({ project, fullWidth = false }: ProjectCardP
         fullWidth ? 'flex items-center justify-between gap-8' : 'flex flex-col'
       }`}
     >
-      <div className={fullWidth ? 'flex items-center gap-5 flex-1' : ''}>
-        <div className={fullWidth ? 'flex-shrink-0' : 'flex justify-between items-start mb-5'}>
-          <span className="text-2xl" aria-hidden="true">{project.icon}</span>
-          {!fullWidth && (
-            <span className={`text-[11px] font-medium px-2.5 py-1 rounded-md ${bg} ${text}`}>
-              {project.status}
-            </span>
-          )}
-        </div>
-        <div>
-          <h3 className="text-[15px] font-medium text-gray-900 mb-1.5">{project.name}</h3>
-          <p className="text-sm text-gray-500 leading-relaxed">{project.oneliner}</p>
-        </div>
-      </div>
-      <div className={`flex gap-1.5 flex-wrap ${fullWidth ? 'flex-shrink-0 items-center' : 'mt-5'}`}>
-        {fullWidth && (
-          <span className={`text-[11px] font-medium px-2.5 py-1 rounded-md ${bg} ${text} mr-2`}>
+      <div className={fullWidth ? 'flex-1' : ''}>
+        <div className={`flex ${fullWidth ? 'items-center gap-4' : 'justify-between items-start mb-4'}`}>
+          <h3 className="text-[15px] font-medium text-gray-900">{project.name}</h3>
+          <span className={`text-[11px] font-medium px-2.5 py-1 rounded-md whitespace-nowrap ${bg} ${text}`}>
             {project.status}
           </span>
+        </div>
+        {!fullWidth && (
+          <p className="text-sm text-gray-500 leading-relaxed mt-2">{project.oneliner}</p>
         )}
+        {fullWidth && (
+          <p className="text-sm text-gray-500 leading-relaxed mt-1">{project.oneliner}</p>
+        )}
+      </div>
+      <div className={`flex gap-1.5 flex-wrap ${fullWidth ? 'flex-shrink-0' : 'mt-4'}`}>
         {project.tags.map((tag) => (
-          <span
-            key={tag}
-            className="text-[11px] text-gray-400 bg-gray-50 px-2 py-0.5 rounded-md"
-          >
+          <span key={tag} className="text-[11px] text-gray-400 bg-gray-50 px-2 py-0.5 rounded-md">
             {tag}
           </span>
         ))}
