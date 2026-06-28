@@ -1,5 +1,6 @@
 import Nav from '@/components/Nav';
 import Hero from '@/components/Hero';
+import XanaduIntro from '@/components/XanaduIntro';
 import ProjectGrid from '@/components/ProjectGrid';
 import EngineSection from '@/components/EngineSection';
 import WhyBuilt from '@/components/WhyBuilt';
@@ -12,6 +13,7 @@ export default function Home() {
         <div className="max-w-3xl mx-auto px-6">
           <Nav dark />
           <Hero />
+          <XanaduIntro />
         </div>
       </div>
       <main className="max-w-3xl mx-auto px-6">
