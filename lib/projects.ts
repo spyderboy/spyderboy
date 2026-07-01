@@ -30,7 +30,7 @@ export const PROJECTS: Project[] = [
     icon: '📻',
   },
   {
-    name: 'Galaxain',
+    name: 'Galaxican',
     status: 'Coming soon',
     oneliner: 'A space strategy game where stars produce resources, fleets capture territory, and one more turn becomes five.',
     tags: ['iOS', 'Android', 'Flutter/Flame'],
