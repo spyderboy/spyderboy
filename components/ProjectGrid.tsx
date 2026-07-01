@@ -3,10 +3,10 @@ import ProjectCard from './ProjectCard';
 import RetroCarRadioCard from './RetroCarRadioCard';
 import MagicTaskHatCard from './MagicTaskHatCard';
 import EstateWiseCard from './EstateWiseCard';
+import PodomusCard from './PodomusCard';
 
 export default function ProjectGrid() {
   const galaxain = PROJECTS[1];
-  const podomus = PROJECTS[4];
 
   return (
     <section id="projects" className="border-t border-gray-100 py-12">
@@ -18,7 +18,7 @@ export default function ProjectGrid() {
           <MagicTaskHatCard />
         </div>
         <EstateWiseCard />
-        <ProjectCard project={podomus} />
+        <PodomusCard />
       </div>
     </section>
   );
