@@ -6,11 +6,11 @@ import Image from 'next/image';
 const BASE = '/images/projects/podamus/';
 
 const SCREENSHOTS = [
-  { src: BASE + 'Screenshot 2026-07-01 at 7.44.53 PM.png', label: 'Dashboard' },
-  { src: BASE + 'Screenshot 2026-07-01 at 7.45.06 PM.png', label: 'My Podcasts' },
-  { src: BASE + 'Screenshot 2026-07-01 at 7.45.37 PM.png', label: 'Podcast detail' },
-  { src: BASE + 'Screenshot 2026-07-01 at 7.46.15 PM.png', label: 'Episode detail' },
-  { src: BASE + 'Screenshot 2026-07-01 at 7.46.38 PM.png', label: 'Analytics' },
+  { src: BASE + 'podamus-1.png', label: 'Dashboard' },
+  { src: BASE + 'podamus-2.png', label: 'My Podcasts' },
+  { src: BASE + 'podamus-3.png', label: 'Podcast detail' },
+  { src: BASE + 'podamus-4.png', label: 'Episode detail' },
+  { src: BASE + 'podamus-5.png', label: 'Analytics' },
 ];
 
 export default function PodomusGallery() {
@@ -56,7 +56,6 @@ export default function PodomusGallery() {
               width={88}
               height={50}
               className="object-cover object-top w-full h-full"
-              unoptimized
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
             {i === 0 && (
@@ -96,7 +95,6 @@ export default function PodomusGallery() {
                 sizes="(max-width: 1280px) 100vw, 1280px"
                 className="object-contain"
                 priority
-                unoptimized
               />
               <button onClick={prev} aria-label="Previous" className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 rounded-full p-2 text-white transition-colors z-10">
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

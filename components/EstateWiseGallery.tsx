@@ -6,12 +6,12 @@ import Image from 'next/image';
 const BASE = '/images/projects/estatewise/';
 
 const SCREENSHOTS = [
-  { src: BASE + 'Screenshot 2026-07-01 at 7.35.31 PM.png', label: 'Dashboard' },
-  { src: BASE + 'Screenshot 2026-07-01 at 7.36.05 PM.png', label: 'Building financials' },
-  { src: BASE + 'Screenshot 2026-07-01 at 7.36.39 PM.png', label: 'Tenant detail' },
-  { src: BASE + 'Screenshot 2026-07-01 at 7.37.49 PM.png', label: 'Repairs tracker' },
-  { src: BASE + 'Screenshot 2026-07-01 at 7.38.26 PM.png', label: 'P&L by property' },
-  { src: BASE + 'Screenshot 2026-07-01 at 7.39.00 PM.png', label: 'AI predictions' },
+  { src: BASE + 'estatewise-1.png', label: 'Dashboard' },
+  { src: BASE + 'estatewise-3.png', label: 'Building financials' },
+  { src: BASE + 'estatewise-5.png', label: 'Tenant detail' },
+  { src: BASE + 'estatewise-8.png', label: 'Repairs tracker' },
+  { src: BASE + 'estatewise-10.png', label: 'P&L by property' },
+  { src: BASE + 'estatewise-11.png', label: 'AI predictions' },
 ];
 
 export default function EstateWiseGallery() {
@@ -57,7 +57,6 @@ export default function EstateWiseGallery() {
               width={88}
               height={50}
               className="object-cover object-top w-full h-full"
-              unoptimized
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
             {i === 0 && (
@@ -97,7 +96,6 @@ export default function EstateWiseGallery() {
                 sizes="(max-width: 1280px) 100vw, 1280px"
                 className="object-contain"
                 priority
-                unoptimized
               />
               <button onClick={prev} aria-label="Previous" className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 rounded-full p-2 text-white transition-colors z-10">
                 <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
