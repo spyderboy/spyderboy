@@ -2,10 +2,11 @@ import { PROJECTS } from '@/lib/projects';
 import ProjectCard from './ProjectCard';
 import RetroCarRadioCard from './RetroCarRadioCard';
 import MagicTaskHatCard from './MagicTaskHatCard';
+import EstateWiseCard from './EstateWiseCard';
 
 export default function ProjectGrid() {
   const galaxain = PROJECTS[1];
-  const bottomRow = [PROJECTS[3], PROJECTS[4]]; // Apartment Manager, Podomus
+  const podomus = PROJECTS[4];
 
   return (
     <section id="projects" className="border-t border-gray-100 py-12">
@@ -16,9 +17,8 @@ export default function ProjectGrid() {
         <div className="md:col-span-2">
           <MagicTaskHatCard />
         </div>
-        {bottomRow.map((project) => (
-          <ProjectCard key={project.name} project={project} />
-        ))}
+        <EstateWiseCard />
+        <ProjectCard project={podomus} />
       </div>
     </section>
   );

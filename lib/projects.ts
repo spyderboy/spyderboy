@@ -44,10 +44,10 @@ export const PROJECTS: Project[] = [
     icon: '🪄',
   },
   {
-    name: 'Apartment Manager',
+    name: 'Estate Wise',
     status: 'In development',
-    oneliner: 'Property management for 29 real units. Built to solve a real problem — and it works.',
-    tags: ['Flutter', 'Firebase'],
+    oneliner: 'Property management for 8 real buildings and 29 real units. Built because nothing else fit — and it actually works.',
+    tags: ['Next.js', 'Firebase', 'GCP'],
     icon: '🏠',
   },
   {
