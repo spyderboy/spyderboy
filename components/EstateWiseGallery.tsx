@@ -57,6 +57,7 @@ export default function EstateWiseGallery() {
               width={88}
               height={50}
               className="object-cover object-top w-full h-full"
+              unoptimized
             />
             <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
             {i === 0 && (
@@ -86,6 +87,7 @@ export default function EstateWiseGallery() {
               </svg>
             </button>
 
+            {/* Main image + nav arrows */}
             <div className="relative w-full rounded-xl overflow-hidden bg-gray-50" style={{ aspectRatio: '16 / 9' }}>
               <Image
                 key={SCREENSHOTS[active].src}
@@ -95,28 +97,23 @@ export default function EstateWiseGallery() {
                 sizes="(max-width: 1280px) 100vw, 1280px"
                 className="object-contain"
                 priority
+                unoptimized
               />
+              <button onClick={prev} aria-label="Previous" className="absolute left-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 rounded-full p-2 text-white transition-colors z-10">
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button onClick={next} aria-label="Next" className="absolute right-3 top-1/2 -translate-y-1/2 bg-black/40 hover:bg-black/70 rounded-full p-2 text-white transition-colors z-10">
+                <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
             </div>
 
             <div className="flex items-center justify-between mt-3 px-0.5">
               <span className="text-sm text-white/50">{SCREENSHOTS[active].label}</span>
-              <span className="text-sm text-white/30">{active + 1} / {SCREENSHOTS.length}</span>
-            </div>
-
-            <button onClick={prev} aria-label="Previous" className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-12 text-white/40 hover:text-white transition-colors hidden sm:block">
-              <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-            <button onClick={next} aria-label="Next" className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-12 text-white/40 hover:text-white transition-colors hidden sm:block">
-              <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
-                <path strokeLinecap="round" strokeLinejoin="round" d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-
-            <div className="absolute inset-0 flex sm:hidden rounded-xl overflow-hidden">
-              <button onClick={prev} className="flex-1" aria-label="Previous" />
-              <button onClick={next} className="flex-1" aria-label="Next" />
+              <span className="text-sm text-white/40">{active + 1} / {SCREENSHOTS.length}</span>
             </div>
           </div>
         </div>
