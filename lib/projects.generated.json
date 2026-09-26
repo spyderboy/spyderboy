@@ -1,0 +1,321 @@
+[
+  {
+    "id": "xanadu",
+    "name": "Xanadu",
+    "status": "In daily use",
+    "tagline": "An autonomous development loop: local LLMs plan, write, test and fix code straight from a roadmap, escalating to Claude only when they're stuck.",
+    "description": "Xanadu is the engine behind everything else on this page. Give it a\nproject's ROADMAP.md and it works through the tasks unattended, one\nvalidated change at a time, then surfaces only the blockers that genuinely\nneed a human. Most of the work runs on local models on hardware I already\nown; paid cloud models are the last rung of the ladder, not the first.",
+    "features": [
+      "Works straight from a project's ROADMAP.md: one task, one tested change",
+      "Tiered model ladder: four local LLM tiers first, Claude only after repeat failures",
+      "Real validation gates: static analysis plus per-task tests on every attempt",
+      "Learns from its mistakes: repeated error patterns become permanent rules shared across machines",
+      "Scales from one Mac to parallel workers to rented RunPod GPUs",
+      "Fully resumable: all state lives in the roadmap and git, so it survives being killed mid-run"
+    ],
+    "tags": [
+      "Python",
+      "Anthropic API",
+      "Google Cloud Firestore"
+    ],
+    "liveUrl": null,
+    "demoVideo": null,
+    "screenshots": [
+      {
+        "src": "/images/projects/xanadu/01.jpg",
+        "caption": "Architecture — local LLM tiers escalate to Claude only when stuck, and a shared learning store feeds fixes back"
+      },
+      {
+        "src": "/images/projects/xanadu/02.jpg",
+        "caption": "Velocity report — Galaxican: 626 tasks done, 483 passed on the first attempt"
+      },
+      {
+        "src": "/images/projects/xanadu/03.jpg",
+        "caption": "Supervisor run — ROADMAP finished unattended, then the learned-rules promotion pass"
+      }
+    ]
+  },
+  {
+    "id": "galaxican",
+    "name": "Galaxican",
+    "status": "Live",
+    "tagline": "Merge fleets. Take the galaxy. Minimalist real-time strategy with no ads and no in-app purchases.",
+    "description": "Real-time strategy stripped to its bones. Capture stars, merge swarms of\nunits into squads and battleships, and push back enemy fleets across 30\nlevels and 90 challenges in six galactic regions. It plays offline, with no\nads and no in-app purchases.",
+    "features": [
+      "30 levels and 90 challenges across 6 galactic regions",
+      "Captured stars spawn units; fuse them into squads and battleships",
+      "Enemy towers and AI squads that fight back",
+      "Single-drag lasso selection, pinch or scroll zoom, two-finger pan",
+      "Plays offline: no ads, no in-app purchases, no internet permission",
+      "iOS, Android, and an in-browser build"
+    ],
+    "tags": [
+      "Flutter",
+      "Firebase",
+      "GCP Cloud Functions"
+    ],
+    "liveUrl": "https://galaxican.com",
+    "demoVideo": "c89YFJSFUJ8",
+    "screenshots": [
+      {
+        "src": "/images/projects/galaxican/01.jpg",
+        "caption": "Title screen"
+      },
+      {
+        "src": "/images/projects/galaxican/02.jpg",
+        "caption": "Level select — Pro unlocked, 30 levels across 6 regions"
+      },
+      {
+        "src": "/images/projects/galaxican/03.jpg",
+        "caption": "Expanding across the lane — captured stars spawning motes"
+      },
+      {
+        "src": "/images/projects/galaxican/04.jpg",
+        "caption": "Full battle — enemy towers and squads push back"
+      }
+    ]
+  },
+  {
+    "id": "personalagile",
+    "name": "Magic Task Hat",
+    "status": "Live",
+    "tagline": "Your personal life organizer — sprints, wishlist, roadmap, and a \"magic hat\" that randomly picks your next task when you can't decide.",
+    "description": "A personal life organizer that runs on agile. Rank everything you want to do\nwith a MICE score, commit the best of it to a sprint, and watch your roadmap\nfill in. When you can't decide what's next, let the magic hat pick for you.",
+    "features": [
+      "Gamified onboarding: start Small (3 tasks, 3 days) or go BIG (two-week sprints)",
+      "Pipeline ranks every task by MICE score: Magnitude, Impact, Confidence, Effort",
+      "Sprint board with To Do, In Progress and Done, plus a daily check-in",
+      "Roadmap projects future sprints from your effort capacity",
+      "Analytics with unlockable insight milestones and lifetime stats",
+      "Magic Hat Templates: curated objectives by category, added in one click",
+      "AI-suggested scores and objectives, in your own language"
+    ],
+    "tags": [
+      "Next.js",
+      "React",
+      "React Native",
+      "Vitest",
+      "Tailwind CSS",
+      "TypeScript",
+      "Firebase"
+    ],
+    "liveUrl": "https://magictaskhat.com",
+    "demoVideo": null,
+    "screenshots": [
+      {
+        "src": "/images/projects/personalagile/01.jpg",
+        "caption": "Gamified onboarding — pick Small (3 tasks, 3 days) or BIG (two-week sprints)"
+      },
+      {
+        "src": "/images/projects/personalagile/02.jpg",
+        "caption": "Pipeline — every task ranked by MICE score (Magnitude, Impact, Confidence, Effort)"
+      },
+      {
+        "src": "/images/projects/personalagile/03.jpg",
+        "caption": "Sprint board — To Do / In Progress / Done with a daily check-in"
+      },
+      {
+        "src": "/images/projects/personalagile/04.jpg",
+        "caption": "Roadmap — current sprint plus projected future sprints from your effort capacity"
+      },
+      {
+        "src": "/images/projects/personalagile/05.jpg",
+        "caption": "Analytics — unlockable insight milestones and lifetime stats"
+      },
+      {
+        "src": "/images/projects/personalagile/06.jpg",
+        "caption": "Magic Hat Templates — curated objectives by category, added to your Pipeline in one click"
+      },
+      {
+        "src": "/images/projects/personalagile/07.jpg",
+        "caption": "New Task — checklist, suggested objective, and live priority score"
+      }
+    ]
+  },
+  {
+    "id": "old-car-radio",
+    "name": "Retro Car Radio",
+    "status": "Live",
+    "tagline": "Internet radio with a classic car preset interface. Old-school vibes, a world of streaming.",
+    "description": "Tune in like it's 1975. Retro Car Radio puts a vintage dashboard radio on\nyour phone, streaming live stations from the Radio Browser community\ndirectory. Program favorites to the push-button presets, or load a curated\npreset set and just drive.",
+    "features": [
+      "Live streaming with station logos and now-playing metadata",
+      "Curated preset sets: Public Radio, Golden Oldies, decades and genres",
+      "Station search by genre, sorted by stream quality",
+      "Program any station to a preset button, or add it to a set",
+      "Cloud sync, preset pack import, and a listening leaderboard",
+      "iOS and Android"
+    ],
+    "tags": [
+      "Flutter",
+      "Firebase Cloud Functions",
+      "Node/TypeScript"
+    ],
+    "liveUrl": "https://retrocarradio.com",
+    "demoVideo": "8y1uT_YqkMk",
+    "screenshots": [
+      {
+        "src": "/images/projects/old-car-radio/01.jpg",
+        "caption": "Tuner — WYEP playing live, station logo on the TV"
+      },
+      {
+        "src": "/images/projects/old-car-radio/02.jpg",
+        "caption": "Pro preset sets — Lucky, Public Radio, Golden Oldies, genre sets"
+      },
+      {
+        "src": "/images/projects/old-car-radio/03.jpg",
+        "caption": "70s genre set — disco/funk station streaming"
+      },
+      {
+        "src": "/images/projects/old-car-radio/04.jpg",
+        "caption": "Station search filtered to Jazz, sorted by quality"
+      },
+      {
+        "src": "/images/projects/old-car-radio/05.jpg",
+        "caption": "Search result actions — play now, program to preset, add to set"
+      },
+      {
+        "src": "/images/projects/old-car-radio/06.jpg",
+        "caption": "Settings — cloud sync, pack import, sign-in, leaderboard"
+      }
+    ]
+  },
+  {
+    "id": "hootpgh",
+    "name": "HootPGH",
+    "status": "Beta",
+    "tagline": "Community-driven platform for activism and resource sharing in Pittsburgh.",
+    "description": "A hub for Pittsburgh organizers and neighbors: urgent calls to action, a\ndirectory of emergency and crisis resources, and a searchable calendar of\ncommunity events, all in one place.",
+    "features": [
+      "Latest updates feed on the home page",
+      "Action alerts: urgent, time-sensitive calls to action",
+      "Resource directory for emergency and crisis support",
+      "Community events with search, filters, and list or calendar views"
+    ],
+    "tags": [
+      "Flutter",
+      "Firebase",
+      "Node.js"
+    ],
+    "liveUrl": "https://hootpgh.netlify.app/",
+    "demoVideo": null,
+    "screenshots": [
+      {
+        "src": "/images/projects/hootpgh/01.jpg",
+        "caption": "Home — hero and latest updates feed"
+      },
+      {
+        "src": "/images/projects/hootpgh/02.jpg",
+        "caption": "Action alerts — urgent calls to action"
+      },
+      {
+        "src": "/images/projects/hootpgh/03.jpg",
+        "caption": "Resources — emergency and crisis support directory"
+      },
+      {
+        "src": "/images/projects/hootpgh/04.jpg",
+        "caption": "Events — search, filters, list/calendar views"
+      }
+    ]
+  },
+  {
+    "id": "witches-bricks",
+    "name": "Witch's Bricks",
+    "status": "In development",
+    "tagline": "A turn-based tactical hex board game where gem \"bricks\" capture tiles and merge upward in grade.",
+    "description": "Two witches, one hex board, one action per turn. Move and grow your gems,\ncapture sockets, and merge bricks into higher grades before the board fills.\nEach campaign level teaches one new mechanic, against a deterministic AI\nopponent.",
+    "features": [
+      "Campaign where every level teaches one mechanic, starting with The Spark: move and grow",
+      "Ruby vs Sapphire duels on a hex board",
+      "Select a gem to light up every socket it can reach",
+      "One action per turn, answered by the AI opponent",
+      "Built spec-first by Xanadu: a normative spec with a conformance test suite"
+    ],
+    "tags": [
+      "Flutter"
+    ],
+    "liveUrl": null,
+    "demoVideo": null,
+    "screenshots": [
+      {
+        "src": "/images/projects/witches-bricks/01.jpg",
+        "caption": "Level 1 — Ruby vs Sapphire on a hex board, hold more bricks when it fills"
+      },
+      {
+        "src": "/images/projects/witches-bricks/02.jpg",
+        "caption": "Select a gem — its ring lights up along with every socket it can reach"
+      },
+      {
+        "src": "/images/projects/witches-bricks/03.jpg",
+        "caption": "One action per turn — the gem moved, then the Sapphire AI replied"
+      }
+    ]
+  },
+  {
+    "id": "projectsdash",
+    "name": "ProjectsDash",
+    "status": "Internal tool",
+    "tagline": "A local dashboard for everything I'm building: status, activity, roadmap progress, and who (or what) did the work.",
+    "description": "The control room for this whole portfolio. ProjectsDash scans every project\non my machine and shows where each one stands: commit activity, roadmap\nprogress, curated screenshots, and how much of the work ran on local LLMs,\nRunPod GPUs, or Claude. It's also where the screenshots on this page are\ncurated.",
+    "features": [
+      "Project cards with status, stage, weekly commit sparkline and roadmap progress",
+      "Per-project Weekly Activity chart with hover counts",
+      "Where the Work Ran: local LLM on the Mac vs RunPod vs Claude vs untagged commits",
+      "Xanadu activity: tasks per day, average duration, finished tasks by model",
+      "Editable stack, repo, hosting and ops commands, written back to each project",
+      "Marketing vault with a drag-to-reorder screenshot gallery"
+    ],
+    "tags": [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Drizzle",
+      "Vitest"
+    ],
+    "liveUrl": null,
+    "demoVideo": null,
+    "screenshots": [
+      {
+        "src": "/images/projects/projectsdash/01.jpg",
+        "caption": "Dashboard — commit sparkline, uncommitted/health-check/project counts, status/stage filters"
+      },
+      {
+        "src": "/images/projects/projectsdash/02.jpg",
+        "caption": "Project cards — thumbnail, status badges, weekly sparkline, roadmap progress, lines changed"
+      },
+      {
+        "src": "/images/projects/projectsdash/03.jpg",
+        "caption": "Sparkline hover — commits per week, tooltip kept inside the card"
+      },
+      {
+        "src": "/images/projects/projectsdash/04.jpg",
+        "caption": "Project detail — thumbnail, name, status/stage/priority"
+      },
+      {
+        "src": "/images/projects/projectsdash/05.jpg",
+        "caption": "Weekly Activity — 12-week commit chart with hover counts"
+      },
+      {
+        "src": "/images/projects/projectsdash/06.jpg",
+        "caption": "Where the Work Ran — local LLM on Mac vs RunPod, Claude Code, untagged commits"
+      },
+      {
+        "src": "/images/projects/projectsdash/07.jpg",
+        "caption": "Xanadu Activity — tasks per day, average duration, finished tasks by model"
+      },
+      {
+        "src": "/images/projects/projectsdash/08.jpg",
+        "caption": "Tech & Ops — editable stack tags, repo/hosting, build/deploy commands"
+      },
+      {
+        "src": "/images/projects/projectsdash/09.jpg",
+        "caption": "Marketing Vault — tagline, promo text, drag-to-reorder screenshot gallery"
+      },
+      {
+        "src": "/images/projects/projectsdash/10.jpg",
+        "caption": "Stats — portfolio overview and projects by status/stage"
+      }
+    ]
+  }
+]
