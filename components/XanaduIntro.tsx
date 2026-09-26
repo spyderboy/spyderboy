@@ -18,8 +18,8 @@ export default function XanaduIntro() {
           it can already solve.
         </p>
         <p>
-          The apps it ships aren&apos;t just products. They&apos;re the benchmarks. Galaxian at
-          535 completed tasks is a live proof of concept for the system itself.
+          The apps it ships aren&apos;t just products. They&apos;re the benchmarks. Galaxican at
+          600+ completed tasks is a live proof of concept for the system itself.
         </p>
         <p>
           What you&apos;re watching in the video above isn&apos;t a demo of AI-assisted

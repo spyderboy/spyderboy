@@ -5,7 +5,7 @@ export const NAV_LINKS = [
 ];
 
 export const ENGINE_STATS = [
-  { label: 'Tasks completed autonomously', value: '535+' },
+  { label: 'Tasks completed autonomously', value: '1,200+' },
   { label: 'First-pass success rate', value: '~70%' },
   { label: 'LLM tiers in the cascade', value: '4 + Claude' },
 ];
