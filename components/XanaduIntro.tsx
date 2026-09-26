@@ -13,7 +13,7 @@ export default function XanaduIntro() {
         <p>
           It runs on open models, on hardware I control. Day to day, that&apos;s a Mac running a
           27B coding model through Apple&apos;s MLX. When a roadmap is big, it bursts to RunPod:
-          rented GPUs running parallel workers that clear hundreds of tasks in a sprint. Claude
+          a rented GPU running parallel workers that clear hundreds of tasks in a sprint. Claude
           sits at the top of the ladder, reached only when a task has beaten every local tier —
           so frontier compute goes to the problems that genuinely need it.
         </p>
@@ -30,7 +30,7 @@ export default function XanaduIntro() {
         </p>
         <p>
           The apps it ships aren&apos;t just products. They&apos;re the benchmarks. Galaxican at
-          600+ completed tasks — most of them run in parallel on RunPod GPUs — is a live proof of
+          600+ completed tasks — most of them run in parallel on a RunPod GPU — is a live proof of
           concept for the system itself.
         </p>
         <p>

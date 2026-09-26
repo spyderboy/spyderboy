@@ -13,8 +13,11 @@ export default function EngineSection() {
             correction, and a planning layer that turns a backlog into running code — unattended.
           </p>
           <p className="text-sm text-gray-500 leading-relaxed">
-            Claude and Gemini sit at the top, handling escalations and architecture. Everything
-            below runs locally. A 2-week plan compresses to 2–3 days of wall-clock time.
+            Claude sits at the top, handling escalations and architecture. Everything below runs
+            on open models — on my Mac, or on a rented RunPod GPU running several agents in
+            parallel to handle big sprints rapidly. Gemini is the outside voice: I consult it for
+            creative work and as a sanity check on what the loop produces. A 2-week plan
+            compresses to 2–3 days of wall-clock time.
           </p>
         </div>
         <div className="flex flex-col gap-2">
