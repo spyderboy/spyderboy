@@ -79,15 +79,15 @@
     "id": "personalagile",
     "name": "Magic Task Hat",
     "status": "Live",
-    "tagline": "Your personal life organizer — sprints, wishlist, roadmap, and a \"magic hat\" that randomly picks your next task when you can't decide.",
-    "description": "A personal life organizer that runs on agile. Rank everything you want to do\nwith a MICE score, commit the best of it to a sprint, and watch your roadmap\nfill in. When you can't decide what's next, let the magic hat pick for you.",
+    "tagline": "Your personal life organizer — sprints, a roadmap, and a magic hat full of ready-made tasks, with everything automatically ordered by priority.",
+    "description": "A personal life organizer that runs on agile. Pull ready-made tasks from the\nmagic hat — common goals, pre-filled and already estimated — and get started\nin minutes. Everything you add is scored and automatically ordered by\npriority, so the most important thing is always next. Commit the top of the\nlist to a sprint and watch your roadmap fill in.",
     "features": [
       "Gamified onboarding: start Small (3 tasks, 3 days) or go BIG (two-week sprints)",
-      "Pipeline ranks every task by MICE score: Magnitude, Impact, Confidence, Effort",
+      "Pipeline automatically orders every task by MICE score (Magnitude, Impact, Confidence, Effort), most important first",
       "Sprint board with To Do, In Progress and Done, plus a daily check-in",
       "Roadmap projects future sprints from your effort capacity",
       "Analytics with unlockable insight milestones and lifetime stats",
-      "Magic Hat Templates: curated objectives by category, added in one click",
+      "Magic Hat: a store of common tasks, pre-filled and estimated, added in one click",
       "AI-suggested scores and objectives, in your own language"
     ],
     "tags": [
