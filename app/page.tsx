@@ -5,10 +5,12 @@ import ProjectGrid from '@/components/ProjectGrid';
 import EngineSection from '@/components/EngineSection';
 import WhyBuilt from '@/components/WhyBuilt';
 import Footer from '@/components/Footer';
+import StructuredData from '@/components/StructuredData';
 
 export default function Home() {
   return (
     <>
+      <StructuredData />
       <div className="bg-[#0f0f0f]">
         <div className="max-w-3xl mx-auto px-6">
           <Nav dark />
