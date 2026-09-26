@@ -6,11 +6,11 @@ const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
   title: 'Spyderboy Studio — Jose Antonio Licon',
-  description: 'One person. Five very different projects. One engine. Shipping daily.',
+  description: 'One person. Many very different projects. One engine. Shipping daily.',
   metadataBase: new URL('https://spyderboy.com'),
   openGraph: {
     title: 'Spyderboy Studio — Jose Antonio Licon',
-    description: 'One person. Five very different projects. One engine. Shipping daily.',
+    description: 'One person. Many very different projects. One engine. Shipping daily.',
     url: 'https://spyderboy.com',
     siteName: 'Spyderboy Studio',
     type: 'website',
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     creator: '@spyderboy',
     title: 'Spyderboy Studio — Jose Antonio Licon',
-    description: 'One person. Five very different projects. One engine. Shipping daily.',
+    description: 'One person. Many very different projects. One engine. Shipping daily.',
   },
   robots: { index: true, follow: true },
   alternates: { canonical: 'https://spyderboy.com' },

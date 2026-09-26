@@ -6,7 +6,7 @@ export default function Hero() {
       </p>
       <h1 className="text-4xl md:text-5xl font-medium leading-tight tracking-tight text-white mb-8">
         One person.<br />
-        Five very different projects.<br />
+        Many very different projects.<br />
         One engine.<br />
         Shipping daily.
       </h1>

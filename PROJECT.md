@@ -18,8 +18,11 @@ date_started: 2026-06-23T18:00:10+02:00
 
 ## Marketing
 ### Tagline
-Spyderboy Studio — Jose Antonio Licon. One person. Five very different
+Spyderboy Studio — Jose Antonio Licon. One person. Many very different
 projects. One engine. Shipping daily.
+
+## Screenshots
+Captured in the projectsdash dashboard (Chrome, Pixel 9 landscape).
 
 ## Notes
 Personal portfolio/studio site showcasing the other projects in this
