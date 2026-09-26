@@ -12,10 +12,12 @@ export default function XanaduIntro() {
         </p>
         <p>
           It runs on open models, on hardware I control. Day to day, that&apos;s a Mac running a
-          27B coding model through Apple&apos;s MLX. When a roadmap is big, it bursts to RunPod:
-          a rented GPU running parallel workers that clear hundreds of tasks in a sprint. Claude
-          sits at the top of the ladder, reached only when a task has beaten every local tier —
-          so frontier compute goes to the problems that genuinely need it.
+          27B coding model through Apple&apos;s MLX — and in practice, that handles nearly
+          everything. When a roadmap is big, it scales out to RunPod: one rented GPU or many,
+          each running agents in parallel to clear hundreds of tasks in a sprint. The same move
+          buys headroom for larger models if a job ever calls for them. Claude sits at the top
+          of the ladder, reached only when a task has beaten every open-model tier — so frontier
+          compute goes to the problems that genuinely need it.
         </p>
         <p>
           Every rung of that ladder is a setting, not a rewrite. Each tier names a model, and

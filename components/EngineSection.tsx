@@ -14,8 +14,10 @@ export default function EngineSection() {
           </p>
           <p className="text-sm text-gray-500 leading-relaxed">
             Claude sits at the top, handling escalations and architecture. Everything below runs
-            on open models — on my Mac, or on a rented RunPod GPU running several agents in
-            parallel to handle big sprints rapidly. Gemini is the outside voice: I consult it for
+            on open models — usually on my Mac, which handles nearly everything. For big sprints
+            it scales out to rented RunPod GPUs, one or many, running agents in parallel to
+            handle them rapidly — or up to larger models if a job calls for it. Gemini is the
+            outside voice: I consult it for
             creative work and as a sanity check on what the loop produces. A 2-week plan
             compresses to 2–3 days of wall-clock time.
           </p>
