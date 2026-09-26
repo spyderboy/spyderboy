@@ -1,6 +1,9 @@
+import HeroShowcase from './HeroShowcase';
+
 export default function Hero() {
   return (
-    <section className="py-16 md:py-24">
+    <section className="relative py-16 md:py-24">
+      <HeroShowcase />
       <p className="text-xs text-zinc-600 uppercase tracking-widest mb-8">
         Jose Antonio Licon · Pittsburgh, PA
       </p>
