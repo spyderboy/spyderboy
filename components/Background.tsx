@@ -1,6 +1,6 @@
 import { CONTACT } from '@/lib/constants';
 
-const ORGS = ['Libsyn', 'Autodesk', 'University of Pittsburgh', 'WYEP 91.3 FM', 'Wild Pockets', 'Asia City Media Group'];
+const ORGS = ['Libsyn', 'SoundStack', 'Autodesk', 'University of Pittsburgh', 'WYEP 91.3 FM', 'Wild Pockets', 'Asia City Media Group'];
 
 export default function Background() {
   return (
