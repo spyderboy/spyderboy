@@ -1,6 +1,7 @@
+import Image from 'next/image';
 import { ENGINE_STATS, STATS } from '@/lib/constants';
 import StatCard from './StatCard';
-import BookButton from './BookButton';
+import InPractice from './InPractice';
 
 // The one place the architecture is explained; the intro and the Xanadu card link here.
 const PARTS = [
@@ -32,6 +33,22 @@ export default function EngineSection() {
         wall-clock time. Here&apos;s how it works.
       </p>
 
+      <figure className="mb-8">
+        <a href="/images/xanadu-architecture.png" target="_blank" rel="noopener noreferrer" className="block rounded-xl border border-gray-100 overflow-hidden hover:border-gray-300 transition-colors">
+          <Image
+            src="/images/xanadu-architecture.png"
+            alt="Xanadu architecture: a task backlog runs through four local model tiers, escalating to Claude only when stuck; failures and fixes feed a shared learning store; the same engine scales from a solo Mac to parallel workers to rented cloud GPUs."
+            width={1980}
+            height={1020}
+            sizes="(max-width: 768px) 100vw, 720px"
+            className="w-full h-auto"
+          />
+        </a>
+        <figcaption className="text-xs text-gray-500 mt-2">
+          Automation, learning, and scaling run as one loop. Click to enlarge.
+        </figcaption>
+      </figure>
+
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-2 mb-3">
         {ENGINE_STATS.map((stat) => (
           <StatCard key={stat.label} label={stat.label} value={stat.value} />
@@ -51,11 +68,13 @@ export default function EngineSection() {
         ))}
       </div>
 
+      <InPractice />
+
       <p className="text-sm text-gray-600 mt-10">
-        Want a loop like this for your team?{' '}
-        <BookButton className="font-medium text-gray-900 hover:text-gray-600 transition-colors">
-          Book a call →
-        </BookButton>
+        Want a loop like this for your team or your product?{' '}
+        <a href="#contact" className="font-medium text-gray-900 hover:text-gray-600 transition-colors">
+          Get more from AI →
+        </a>
       </p>
     </section>
   );

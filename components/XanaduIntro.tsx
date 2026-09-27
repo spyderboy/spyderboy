@@ -25,6 +25,11 @@ export default function XanaduIntro() {
             How it works →
           </a>
         </p>
+        <p>
+          <a href="#contact" className="text-zinc-200 font-medium underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-300 transition-colors">
+            What could it do for your team? →
+          </a>
+        </p>
       </div>
     </section>
   );

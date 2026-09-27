@@ -6,7 +6,8 @@ import Footer from '@/components/Footer';
 import ProjectGallery from '@/components/ProjectGallery';
 import ProjectActions from '@/components/ProjectActions';
 import YouTubeFacade from '@/components/YouTubeFacade';
-import { PROJECTS, getStatusClasses } from '@/lib/projects';
+import ProjectTags from '@/components/ProjectTags';
+import { PROJECTS, getStatusClasses, type Project } from '@/lib/projects';
 import { SITE } from '@/lib/constants';
 
 export const dynamicParams = false;
@@ -16,6 +17,16 @@ export function generateStaticParams() {
 }
 
 type Props = { params: Promise<{ id: string }> };
+
+// Says only what the task logs support: "built with" needs substantial Xanadu work.
+function xanaduLine(project: Project): string {
+  const n = project.xanaduTasks.toLocaleString('en-US');
+  const ask = 'What could this way of building do for your team or your product?';
+  if (project.id === 'xanadu') return `Xanadu works on its own codebase too — ${n} tasks so far. ${ask}`;
+  if (project.xanaduTasks >= 50) return `${project.name} was built with Xanadu, my autonomous development loop — ${n} tasks. ${ask}`;
+  if (project.xanaduTasks > 0) return `Xanadu, my autonomous development loop, has completed ${n} tasks on ${project.name}. ${ask}`;
+  return `Curious how I build products like ${project.name}? ${ask}`;
+}
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { id } = await params;
@@ -105,16 +116,17 @@ export default async function ProjectPage({ params }: Props) {
           </div>
         )}
 
-        {project.tags.length > 0 && (
-          <div className="flex gap-1.5 flex-wrap mt-8">
-            {project.tags.map((tag) => (
-              <span key={tag} className="text-[11px] text-gray-600 bg-gray-50 px-2 py-0.5 rounded-md">
-                {tag}
-              </span>
-            ))}
-          </div>
-        )}
+        <div className="mt-8">
+          <ProjectTags project={project} />
+        </div>
       </article>
+
+      <aside className="rounded-xl bg-[#0f0f0f] px-6 py-6 mb-8 flex flex-wrap items-center justify-between gap-4">
+        <p className="text-sm text-zinc-300 leading-relaxed max-w-md">{xanaduLine(project)}</p>
+        <Link href="/#contact" className="text-sm font-medium bg-white text-gray-900 hover:bg-zinc-200 transition-colors px-4 py-2 rounded-md whitespace-nowrap">
+          Get more from AI →
+        </Link>
+      </aside>
 
       <nav aria-label="More projects" className="border-t border-gray-100 py-8 flex justify-between gap-4 text-sm">
         <Link href={`/projects/${prev.slug}`} className="text-gray-600 hover:text-gray-900 transition-colors">

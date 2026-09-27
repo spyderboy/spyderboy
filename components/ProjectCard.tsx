@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { Project, getStatusClasses } from '@/lib/projects';
 import ProjectGallery from './ProjectGallery';
 import ProjectActions from './ProjectActions';
+import ProjectTags from './ProjectTags';
 
 // Compact home-page card; the description, features and demo video live on /projects/<id>.
 export default function ProjectCard({ project }: { project: Project }) {
@@ -28,13 +29,7 @@ export default function ProjectCard({ project }: { project: Project }) {
       </div>
 
       <div className="flex items-center justify-between gap-4 flex-wrap mt-4">
-        <div className="flex gap-1.5 flex-wrap">
-          {project.tags.map((tag) => (
-            <span key={tag} className="text-[11px] text-gray-600 bg-gray-50 px-2 py-0.5 rounded-md">
-              {tag}
-            </span>
-          ))}
-        </div>
+        <ProjectTags project={project} />
         <Link
           href={`/projects/${project.slug}`}
           className="text-[13px] font-medium text-gray-900 hover:text-gray-600 transition-colors whitespace-nowrap"

@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, useRef } from 'react';
 import Image from 'next/image';
 import type { Screenshot } from '@/lib/projects';
 
@@ -18,8 +18,12 @@ export default function ProjectGallery({ name, screenshots }: Props) {
   const [open, setOpen] = useState(false);
   const [active, setActive] = useState(0);
   const count = screenshots.length;
+  const dialogRef = useRef<HTMLDivElement>(null);
+  const closeRef = useRef<HTMLButtonElement>(null);
+  const openerRef = useRef<HTMLElement | null>(null);
 
   const openAt = (i: number) => {
+    openerRef.current = document.activeElement as HTMLElement | null;
     setActive(i);
     setOpen(true);
   };
@@ -34,10 +38,34 @@ export default function ProjectGallery({ name, screenshots }: Props) {
       if (e.key === 'Escape') close();
       if (e.key === 'ArrowLeft') prev();
       if (e.key === 'ArrowRight') next();
+      // Keep Tab focus inside the dialog.
+      if (e.key === 'Tab' && dialogRef.current) {
+        const items = [...dialogRef.current.querySelectorAll<HTMLElement>('button, [href]')];
+        const first = items[0];
+        const last = items[items.length - 1];
+        if (!first || !last) return;
+        if (e.shiftKey && document.activeElement === first) {
+          e.preventDefault();
+          last.focus();
+        } else if (!e.shiftKey && document.activeElement === last) {
+          e.preventDefault();
+          first.focus();
+        }
+      }
     };
     document.addEventListener('keydown', onKey);
     return () => document.removeEventListener('keydown', onKey);
   }, [open, close, prev, next]);
+
+  // Move focus into the dialog on open; give it back to the thumbnail on close.
+  useEffect(() => {
+    if (open) {
+      closeRef.current?.focus();
+    } else {
+      openerRef.current?.focus();
+      openerRef.current = null;
+    }
+  }, [open]);
 
   // Prevent body scroll when lightbox is open
   useEffect(() => {
@@ -96,6 +124,7 @@ export default function ProjectGallery({ name, screenshots }: Props) {
       {/* Lightbox */}
       {open && (
         <div
+          ref={dialogRef}
           className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 p-4"
           onClick={close}
           role="dialog"
@@ -104,6 +133,7 @@ export default function ProjectGallery({ name, screenshots }: Props) {
         >
           <div className="relative w-full max-w-5xl" onClick={(e) => e.stopPropagation()}>
             <button
+              ref={closeRef}
               onClick={close}
               aria-label="Close"
               className="absolute -top-9 right-0 text-white/60 hover:text-white transition-colors"

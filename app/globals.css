@@ -23,3 +23,7 @@ html {
     opacity: 0.6;
   }
 }
+
+.hero-thumb-paused {
+  animation-play-state: paused;
+}

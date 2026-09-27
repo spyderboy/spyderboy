@@ -17,6 +17,8 @@ export interface Project {
   description: string;
   features: string[];
   tags: string[];
+  languages: string[]; // detected from the repo by the export, largest first
+  xanaduTasks: number; // finished Xanadu tasks from the project's velocity logs
   liveUrl: string | null;
   appStore: string | null;
   playStore: string | null;

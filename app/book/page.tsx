@@ -10,7 +10,7 @@ import { CAL_URL, CONTACT, SITE } from '@/lib/constants';
 
 const title = `Book a call — ${SITE.name}`;
 const description =
-  'Book a 30-minute consulting conversation with Jose Antonio Licon about LLM token costs, local-first AI development loops, and product architecture.';
+  'Book a 30-minute consulting conversation with Jose Antonio Licon: turning product people into builders, or a measured AI pilot for your dev team.';
 
 export const metadata: Metadata = {
   title,
@@ -30,8 +30,8 @@ export default function BookPage() {
         <p className="text-xs text-gray-500 uppercase tracking-widest mb-6">Consulting</p>
         <h1 className="text-3xl font-medium tracking-tight text-gray-900 mb-4">Book a 30-minute call.</h1>
         <p className="text-sm text-gray-600 leading-relaxed max-w-xl">
-          Architecture, LLM token costs, local-first AI development loops, or bridging product
-          management and autonomous engineering. Pick a time that works — or{' '}
+          Turning your roadmap into running software, or a measured AI pilot for your dev team.
+          Pick a time that works — or{' '}
           <a href={mailto} className="font-medium text-gray-900 hover:text-gray-600 transition-colors">
             email {CONTACT.email}
           </a>

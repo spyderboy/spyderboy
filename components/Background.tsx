@@ -22,7 +22,7 @@ export default function Background() {
             into a system that does the building.
           </p>
         </div>
-        <p className="text-xs text-gray-500 uppercase tracking-widest mt-10 mb-3">Worked with</p>
+        <p className="text-xs text-gray-500 uppercase tracking-widest mt-10 mb-3">Product and technical leadership roles with</p>
         <ul className="flex flex-wrap gap-x-5 gap-y-2 text-sm text-gray-700">
           {ORGS.map((org) => (
             <li key={org}>{org}</li>
@@ -38,6 +38,12 @@ export default function Background() {
             GitHub
           </a>
           .
+        </p>
+        <p className="text-sm text-gray-600 mt-3">
+          Want that on your team?{' '}
+          <a href="#contact" className="font-medium text-gray-900 hover:text-gray-600 transition-colors">
+            Get more from AI →
+          </a>
         </p>
       </div>
     </section>

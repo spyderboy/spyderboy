@@ -15,6 +15,11 @@
       "Anthropic API",
       "Google Cloud Firestore"
     ],
+    "languages": [
+      "Python",
+      "Shell"
+    ],
+    "xanaduTasks": 63,
     "liveUrl": null,
     "appStore": null,
     "playStore": null,
@@ -58,6 +63,12 @@
       "Firebase",
       "GCP Cloud Functions"
     ],
+    "languages": [
+      "Dart",
+      "TypeScript",
+      "Python"
+    ],
+    "xanaduTasks": 626,
     "liveUrl": "https://galaxican.com",
     "appStore": "https://apps.apple.com/us/app/galaxican/id6798325393",
     "playStore": "https://play.google.com/store/apps/details?id=com.galaxican.app",
@@ -110,6 +121,11 @@
       "TypeScript",
       "Firebase"
     ],
+    "languages": [
+      "TypeScript",
+      "JavaScript"
+    ],
+    "xanaduTasks": 0,
     "liveUrl": "https://magictaskhat.com",
     "appStore": null,
     "playStore": null,
@@ -166,6 +182,12 @@
       "Firebase Cloud Functions",
       "Node/TypeScript"
     ],
+    "languages": [
+      "Dart",
+      "JavaScript",
+      "TypeScript"
+    ],
+    "xanaduTasks": 37,
     "liveUrl": "https://retrocarradio.com",
     "appStore": "https://apps.apple.com/us/app/retro-car-radio/id6759336967",
     "playStore": "https://play.google.com/store/apps/details?id=com.retrocarradio.app",
@@ -216,6 +238,12 @@
       "Firebase",
       "Node.js"
     ],
+    "languages": [
+      "Dart",
+      "TypeScript",
+      "JavaScript"
+    ],
+    "xanaduTasks": 7,
     "liveUrl": "https://hootpgh.org",
     "appStore": null,
     "playStore": null,
@@ -257,6 +285,11 @@
     "tags": [
       "Flutter"
     ],
+    "languages": [
+      "Dart",
+      "Python"
+    ],
+    "xanaduTasks": 80,
     "liveUrl": null,
     "appStore": null,
     "playStore": null,
@@ -303,6 +336,10 @@
       "Drizzle",
       "Vitest"
     ],
+    "languages": [
+      "TypeScript"
+    ],
+    "xanaduTasks": 53,
     "liveUrl": null,
     "appStore": null,
     "playStore": null,

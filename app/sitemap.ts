@@ -13,6 +13,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       images: PROJECTS.flatMap((p) => p.screenshots.map((s) => `${SITE.url}${s.src}`)),
     },
     { url: `${SITE.url}/book`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
+    { url: `${SITE.url}/privacy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.2 },
     ...PROJECTS.map((p) => ({
       url: `${SITE.url}/projects/${p.slug}`,
       lastModified: new Date(),

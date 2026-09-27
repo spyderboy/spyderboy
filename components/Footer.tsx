@@ -1,11 +1,13 @@
+import Link from 'next/link';
 import { CONTACT } from '@/lib/constants';
+import CookieSettingsButton from './CookieSettingsButton';
 
 export default function Footer() {
   return (
     <footer className="border-t border-gray-100 py-8">
       <div className="flex flex-wrap justify-between items-center gap-4">
         <p className="text-xs text-gray-500">Jose Antonio Licon · Pittsburgh · 2026</p>
-        <div className="flex gap-5">
+        <div className="flex flex-wrap gap-x-5 gap-y-2">
           <a
             href={CONTACT.linkedin}
             target="_blank"
@@ -20,6 +22,10 @@ export default function Footer() {
           >
             {CONTACT.email}
           </a>
+          <Link href="/privacy" className="text-xs text-gray-500 hover:text-gray-700 transition-colors">
+            Privacy
+          </Link>
+          <CookieSettingsButton className="text-xs text-gray-500 hover:text-gray-700 transition-colors" />
         </div>
       </div>
       <p className="text-[10px] text-gray-500 leading-relaxed mt-6">
