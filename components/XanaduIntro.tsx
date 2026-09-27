@@ -6,42 +6,25 @@ export default function XanaduIntro() {
       </h2>
       <div className="space-y-4 text-sm text-zinc-400 leading-relaxed max-w-xl">
         <p>
-          Not &ldquo;Tony uses AI to help him code&rdquo; — but a tiered, self-correcting,
-          rule-learning execution system that compresses two weeks of work into two days of
-          wall-clock time.
+          Not &ldquo;Antonio uses AI to help him code&rdquo; — an{' '}
+          <em className="text-zinc-300 not-italic font-medium">unattended</em> system that plans
+          the work, writes the code, tests it, and fixes its own mistakes, then brings back only
+          the decisions that need a human.
         </p>
         <p>
-          It runs on open models, on hardware I control. Day to day, that&apos;s a Mac running a
-          27B coding model through Apple&apos;s MLX — and in practice, that handles nearly
-          everything. When a roadmap is big, it scales out to RunPod: one rented GPU or many,
-          each running agents in parallel to clear hundreds of tasks in a sprint. The same move
-          buys headroom for larger models if a job ever calls for them. Claude sits at the top
-          of the ladder, reached only when a task has beaten every open-model tier — so frontier
-          compute goes to the problems that genuinely need it.
+          Most people describing AI-assisted development mean Copilot or Cursor: a smarter
+          autocomplete with someone at the keyboard. This is categorically different. Nobody is at
+          the keyboard.
         </p>
         <p>
-          Every rung of that ladder is a setting, not a rewrite. Each tier names a model, and
-          swapping one in — a newer release, a bigger dense model, a small fast one, a coding
-          specialist — is a config change. When a better open model ships, Xanadu gets better
-          the same day.
+          The apps below aren&apos;t just products. They&apos;re the benchmarks.
         </p>
-        <p>
-          Underneath, a BAD_PATTERNS immune system blocks mistakes it has already seen, a rule
-          promotion loop turns repeated fixes into permanent rules shared across every machine,
-          and a velocity feedback loop shapes what gets planned next.
+        <p className="text-zinc-300 font-medium">
+          That&apos;s Xanadu.{' '}
+          <a href="#engine" className="text-zinc-400 font-normal hover:text-zinc-100 transition-colors">
+            How it works →
+          </a>
         </p>
-        <p>
-          The apps it ships aren&apos;t just products. They&apos;re the benchmarks. Galaxican at
-          600+ completed tasks — most of them run in parallel on a RunPod GPU — is a live proof of
-          concept for the system itself.
-        </p>
-        <p>
-          Most people describing AI-assisted development mean Copilot or Cursor. This is
-          categorically different — an{' '}
-          <em className="text-zinc-300 not-italic font-medium">unattended</em> system with a
-          planner, an executor, a validator, error classification, and a rule promotion loop.
-        </p>
-        <p className="text-zinc-300 font-medium">That&apos;s Xanadu.</p>
       </div>
     </section>
   );

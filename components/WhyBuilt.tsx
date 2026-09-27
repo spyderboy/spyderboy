@@ -1,13 +1,13 @@
 export default function WhyBuilt() {
   return (
     <section id="why" className="border-t border-gray-100 py-12">
-      <p className="text-xs text-gray-400 uppercase tracking-widest mb-10">Why I built it</p>
+      <h2 className="text-xs text-gray-500 uppercase tracking-widest mb-10 font-normal">Why I built it</h2>
       <div className="max-w-2xl">
         <p className="text-xl md:text-2xl font-medium text-gray-900 leading-snug tracking-tight mb-8">
           I started where everyone starts — Claude, Gemini, the usual suspects. I was amazed at
           what was possible. Then I ran out of tokens.
         </p>
-        <div className="space-y-4 text-sm text-gray-500 leading-relaxed">
+        <div className="space-y-4 text-sm text-gray-600 leading-relaxed">
           <p>
             Most people slow down at that point. I bought a maxed-out MacBook Air and started
             learning local LLMs instead.
@@ -20,7 +20,7 @@ export default function WhyBuilt() {
           </p>
           <p>
             Now I set it running overnight. By morning, the project is mostly done. When I need
-            more firepower, I spin up RunPod. A week of backlog in an hour, at a cost that
+            more firepower, I spin up RunPod and the backlog burns down in parallel, at a cost that
             doesn&apos;t require a VC.
           </p>
           <p>
@@ -28,7 +28,7 @@ export default function WhyBuilt() {
             product manager is what makes the system work, not what it replaced. I still drive. I
             still take the wheel when the models hit a wall, or the project needs a pivot. Agile
             methodology is the backbone of the whole system — not just a buzzword, but the actual
-            structure that keeps five projects moving at once.
+            structure that keeps every project on this page moving at once.
           </p>
         </div>
         <blockquote className="mt-8 border-l-2 border-gray-300 pl-5">

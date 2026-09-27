@@ -3,15 +3,12 @@
     "id": "xanadu",
     "name": "Xanadu",
     "status": "In daily use",
-    "tagline": "An autonomous development loop: local LLMs plan, write, test and fix code straight from a roadmap, escalating to Claude only when they're stuck.",
-    "description": "Xanadu is the engine behind everything else on this page. Give it a\nproject's ROADMAP.md and it works through the tasks unattended, one\nvalidated change at a time, then surfaces only the blockers that genuinely\nneed a human. Most of the work runs on local models on hardware I already\nown; paid cloud models are the last rung of the ladder, not the first.",
+    "tagline": "The autonomous development loop behind the projects on this page.",
+    "description": "Give Xanadu a project's roadmap and it works through it unattended, one\ntested change at a time, surfacing only the blockers that genuinely need a\nhuman. The architecture and the numbers are in the Engine section.",
     "features": [
       "Works straight from a project's ROADMAP.md: one task, one tested change",
-      "Tiered model ladder: four local LLM tiers first, Claude only after repeat failures",
-      "Real validation gates: static analysis plus per-task tests on every attempt",
-      "Learns from its mistakes: repeated error patterns become permanent rules shared across machines",
-      "Scales from one Mac to parallel workers to rented RunPod GPUs",
-      "Fully resumable: all state lives in the roadmap and git, so it survives being killed mid-run"
+      "Runs unattended overnight, and picks up where it left off if it's stopped",
+      "Comes back with a finished roadmap or a short list of decisions for a human"
     ],
     "tags": [
       "Python",
@@ -23,8 +20,8 @@
     "playStore": null,
     "storeLabel": null,
     "cta": {
-      "label": "Let's talk about Xanadu",
-      "url": "#contact"
+      "label": "How it works",
+      "url": "#engine"
     },
     "demoVideo": null,
     "screenshots": [
@@ -219,7 +216,7 @@
       "Firebase",
       "Node.js"
     ],
-    "liveUrl": "https://hootpgh.netlify.app/",
+    "liveUrl": "https://hootpgh.org",
     "appStore": null,
     "playStore": null,
     "storeLabel": null,
@@ -264,7 +261,10 @@
     "appStore": null,
     "playStore": null,
     "storeLabel": null,
-    "cta": null,
+    "cta": {
+      "label": "How it's built",
+      "url": "#engine"
+    },
     "demoVideo": null,
     "screenshots": [
       {
@@ -307,7 +307,10 @@
     "appStore": null,
     "playStore": null,
     "storeLabel": null,
-    "cta": null,
+    "cta": {
+      "label": "How it's built",
+      "url": "#engine"
+    },
     "demoVideo": null,
     "screenshots": [
       {

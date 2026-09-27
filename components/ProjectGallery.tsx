@@ -106,7 +106,7 @@ export default function ProjectGallery({ name, screenshots }: Props) {
             <button
               onClick={close}
               aria-label="Close"
-              className="absolute -top-9 right-0 text-white/50 hover:text-white transition-colors"
+              className="absolute -top-9 right-0 text-white/60 hover:text-white transition-colors"
             >
               <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
@@ -144,7 +144,7 @@ export default function ProjectGallery({ name, screenshots }: Props) {
 
             <div className="flex items-start justify-between gap-4 mt-3 px-0.5">
               <span className="text-sm text-white/60">{current.caption}</span>
-              <span className="text-sm text-white/40 whitespace-nowrap">{active + 1} / {count}</span>
+              <span className="text-sm text-white/60 whitespace-nowrap">{active + 1} / {count}</span>
             </div>
           </div>
         </div>

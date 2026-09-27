@@ -17,8 +17,8 @@ export default function Nav({ dark = false }: NavProps) {
             href={link.href}
             className={`text-sm transition-colors ${
               dark
-                ? 'text-zinc-500 hover:text-zinc-200'
-                : 'text-gray-400 hover:text-gray-900'
+                ? 'text-zinc-400 hover:text-zinc-100'
+                : 'text-gray-500 hover:text-gray-900'
             }`}
           >
             {link.label}

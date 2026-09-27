@@ -15,7 +15,7 @@ export default function StructuredData() {
       image: SITE.avatar,
       jobTitle: 'Developer and product manager',
       address: { '@type': 'PostalAddress', addressLocality: 'Pittsburgh', addressRegion: 'PA', addressCountry: 'US' },
-      sameAs: [CONTACT.github, CONTACT.twitter, CONTACT.linkedin],
+      sameAs: [CONTACT.github, CONTACT.linkedin],
     },
     {
       '@type': 'WebSite',
@@ -35,7 +35,7 @@ export default function StructuredData() {
           '@type': 'SoftwareApplication',
           name: p.name,
           description: p.description || p.tagline,
-          url: p.liveUrl ?? `${SITE.url}/#${p.id}`,
+          url: p.liveUrl ?? `${SITE.url}/projects/${p.slug}`,
           ...(p.screenshots[0] && { image: `${SITE.url}${p.screenshots[0].src}` }),
           ...((p.appStore || p.playStore) && { sameAs: [p.appStore, p.playStore].filter(Boolean) }),
           author: { '@id': personId },

@@ -10,6 +10,7 @@ export interface Screenshot {
 
 export interface Project {
   id: string;
+  slug: string; // URL segment for /projects/<slug>, derived from the product name
   name: string;
   status: string;
   tagline: string;
@@ -25,7 +26,12 @@ export interface Project {
   screenshots: Screenshot[];
 }
 
-export const PROJECTS: Project[] = generated;
+// "Magic Task Hat" -> "magic-task-hat": readable URLs instead of repo ids like "personalagile".
+function slugify(name: string): string {
+  return name.toLowerCase().replace(/['’]/g, '').replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
+}
+
+export const PROJECTS: Project[] = generated.map((p) => ({ ...p, slug: slugify(p.name) }));
 
 export function getStatusClasses(status: string): { bg: string; text: string } {
   switch (status) {

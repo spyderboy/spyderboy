@@ -6,6 +6,7 @@ import EngineSection from '@/components/EngineSection';
 import WhyBuilt from '@/components/WhyBuilt';
 import Footer from '@/components/Footer';
 import Consulting from '@/components/Consulting';
+import Background from '@/components/Background';
 import StructuredData from '@/components/StructuredData';
 
 export default function Home() {
@@ -23,6 +24,7 @@ export default function Home() {
         <ProjectGrid />
         <EngineSection />
         <WhyBuilt />
+        <Background />
         <Consulting />
         <Footer />
       </main>
