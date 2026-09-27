@@ -17,6 +17,10 @@ export interface Project {
   features: string[];
   tags: string[];
   liveUrl: string | null;
+  appStore: string | null;
+  playStore: string | null;
+  storeLabel: string | null;
+  cta: { label: string; url: string } | null;
   demoVideo: string | null;
   screenshots: Screenshot[];
 }

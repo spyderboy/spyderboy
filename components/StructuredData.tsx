@@ -37,6 +37,7 @@ export default function StructuredData() {
           description: p.description || p.tagline,
           url: p.liveUrl ?? `${SITE.url}/#${p.id}`,
           ...(p.screenshots[0] && { image: `${SITE.url}${p.screenshots[0].src}` }),
+          ...((p.appStore || p.playStore) && { sameAs: [p.appStore, p.playStore].filter(Boolean) }),
           author: { '@id': personId },
         },
       })),
