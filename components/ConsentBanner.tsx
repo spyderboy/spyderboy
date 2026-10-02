@@ -8,7 +8,8 @@ export const OPEN_CONSENT_EVENT = 'open-consent';
 
 type Gtag = (...args: unknown[]) => void;
 
-// Analytics runs cookieless (consent mode "denied") until the visitor accepts.
+// In the EU/EEA, UK and Switzerland analytics runs cookieless until the visitor allows it;
+// elsewhere it's on by default (layout.tsx) and "Decline" turns it off.
 // The choice is remembered; "Cookie settings" in the footer reopens this.
 export default function ConsentBanner() {
   const [open, setOpen] = useState(false);
@@ -44,8 +45,8 @@ export default function ConsentBanner() {
     >
       <div className="pointer-events-auto mx-auto max-w-3xl rounded-xl border border-gray-200 bg-white shadow-lg px-5 py-4 flex flex-wrap items-center gap-4">
         <p className="flex-1 min-w-[220px] text-sm text-gray-700 leading-relaxed">
-          I use Google Analytics to see which projects people look at. It only sets cookies if
-          you allow it.{' '}
+          I use Google Analytics to see which projects people look at. In the EU, UK and
+          Switzerland it only sets cookies if you allow it; anywhere else you can turn it off here.{' '}
           <Link href="/privacy" className="underline hover:text-gray-900">
             Privacy
           </Link>

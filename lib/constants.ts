@@ -30,6 +30,12 @@ export const CAL_URL = `https://cal.com/${CAL_LINK}`;
 // Google Analytics 4 measurement ID, and where the visitor's consent choice is stored.
 export const GA_ID = 'G-W9SGW3PGVH';
 export const CONSENT_KEY = 'analytics-consent';
+// Where analytics stays off until the visitor allows it (EU + EEA, UK, Switzerland).
+// Everywhere else it's on by default and the banner lets visitors turn it off.
+export const CONSENT_REGIONS = [
+  'AT', 'BE', 'BG', 'HR', 'CY', 'CZ', 'DK', 'EE', 'FI', 'FR', 'DE', 'GR', 'HU', 'IE', 'IT', 'LV', 'LT', 'LU',
+  'MT', 'NL', 'PL', 'PT', 'RO', 'SK', 'SI', 'ES', 'SE', 'IS', 'LI', 'NO', 'GB', 'CH',
+];
 
 export const SITE = {
   url: 'https://spyderboy.com',

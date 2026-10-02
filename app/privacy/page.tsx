@@ -37,10 +37,11 @@ export default function PrivacyPage() {
         <Section title="Analytics">
           <p>
             The site uses Google Analytics 4 to count visits and see which projects and links people
-            use. Until you choose &ldquo;Allow&rdquo;, it runs in Google&apos;s consent mode without
-            analytics cookies, sending only basic, cookieless signals. If you allow it, Google
-            Analytics sets first-party cookies to recognize repeat visits. Advertising features are
-            off.
+            use. If you visit from the EU, EEA, UK or Switzerland, it runs in Google&apos;s consent mode
+            without analytics cookies until you choose &ldquo;Allow&rdquo;, sending only basic,
+            cookieless signals. Elsewhere, analytics is on by default and you can turn it off with
+            &ldquo;Decline&rdquo;. When it&apos;s on, Google Analytics sets first-party cookies to
+            recognize repeat visits. Advertising features are off everywhere.
           </p>
           <p>
             You can change your choice at any time: <CookieSettingsButton className="underline hover:text-gray-900" />.
