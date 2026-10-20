@@ -1,3 +1,5 @@
+import Term from '@/components/Term';
+import { entryForLabel } from '@/lib/glossary';
 import type { Project } from '@/lib/projects';
 
 // Languages (outlined, detected from the code) first, then the stack tags that
@@ -10,16 +12,30 @@ export default function ProjectTags({ project }: { project: Project }) {
   return (
     <div className="flex gap-1.5 flex-wrap">
       {project.languages.map((lang) => (
-        <span key={lang} className="text-[11px] font-medium text-gray-700 border border-gray-300 px-2 py-0.5 rounded-md">
+        <span
+          key={lang}
+          className="text-[11px] font-medium text-gray-700 border border-gray-300 px-2 py-0.5 rounded-md"
+        >
           <span className="sr-only">Language: </span>
-          {lang}
+          {chipLabel(lang)}
         </span>
       ))}
       {stack.map((tag) => (
         <span key={tag} className="text-[11px] text-gray-600 bg-gray-50 px-2 py-0.5 rounded-md">
-          {tag}
+          {chipLabel(tag)}
         </span>
       ))}
     </div>
+  );
+}
+
+// A tag the glossary knows opens its explanation on click or tap; a dotted underline on hover shows it can.
+function chipLabel(label: string) {
+  const entry = entryForLabel(label);
+  if (!entry) return label;
+  return (
+    <Term id={entry.id} className="cursor-help hover:underline hover:decoration-dotted hover:underline-offset-2">
+      {label}
+    </Term>
   );
 }

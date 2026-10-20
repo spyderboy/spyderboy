@@ -11,10 +11,12 @@ export default function Term({
   id,
   children,
   dark = false,
+  className,
 }: {
   id: string;
   children: React.ReactNode;
   dark?: boolean;
+  className?: string; // replaces the dotted underline, e.g. for a tag chip
 }) {
   const entry = GLOSSARY_BY_ID[id];
   const [open, setOpen] = useState(false);
@@ -85,7 +87,9 @@ export default function Term({
           e.preventDefault();
           setOpen((o) => !o);
         }}
-        className={`underline decoration-dotted underline-offset-4 cursor-help transition-colors ${underline}`}
+        className={
+          className ?? `underline decoration-dotted underline-offset-4 cursor-help transition-colors ${underline}`
+        }
       >
         {children}
       </a>

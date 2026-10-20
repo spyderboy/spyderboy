@@ -2,7 +2,7 @@
 // entry's `short` in an overlay wherever the word appears in the copy. Write for someone who has used ChatGPT and
 // nothing more: plain words, no term explained with another term unless that one is linked in `related`.
 
-export type GlossaryCategory = 'ai' | 'xanadu' | 'delivery';
+export type GlossaryCategory = 'ai' | 'xanadu' | 'delivery' | 'stack';
 
 export interface GlossaryEntry {
   id: string; // the URL anchor on /jargon, and what <Term id> takes
@@ -12,6 +12,7 @@ export interface GlossaryEntry {
   body: string; // the full entry on /jargon
   analogy?: string; // the same idea in everyday terms
   related?: string[]; // other ids
+  aliases?: string[]; // other spellings found in project copy and tags (matched whole-word, any case)
 }
 
 export const CATEGORIES: { id: GlossaryCategory; title: string; intro: string }[] = [
@@ -29,6 +30,11 @@ export const CATEGORIES: { id: GlossaryCategory; title: string; intro: string }[
     id: 'delivery',
     title: 'Building and shipping software',
     intro: 'Product and engineering terms used in the consulting offers.',
+  },
+  {
+    id: 'stack',
+    title: 'The tech behind the projects',
+    intro: 'The languages and services named on the project pages, in a sentence each.',
   },
 ];
 
@@ -73,6 +79,7 @@ export const GLOSSARY: GlossaryEntry[] = [
   },
   {
     id: 'local-model',
+    aliases: ['local LLM', 'local LLMs', 'local model', 'local models'],
     term: 'Local model',
     category: 'ai',
     short:
@@ -108,6 +115,7 @@ export const GLOSSARY: GlossaryEntry[] = [
   },
   {
     id: 'gpu',
+    aliases: ['GPUs', 'GPU'],
     term: 'GPU',
     category: 'ai',
     short: 'The kind of chip AI models run fastest on. Data centres rent them by the hour.',
@@ -116,6 +124,7 @@ export const GLOSSARY: GlossaryEntry[] = [
   },
   {
     id: 'runpod',
+    aliases: ['RunPod'],
     term: 'RunPod',
     category: 'ai',
     short:
@@ -125,6 +134,7 @@ export const GLOSSARY: GlossaryEntry[] = [
   },
   {
     id: 'agentic-assistant',
+    aliases: ['Claude Code'],
     term: 'Agentic assistant',
     category: 'ai',
     short:
@@ -145,6 +155,7 @@ export const GLOSSARY: GlossaryEntry[] = [
   // ---- How Xanadu works ----
   {
     id: 'autonomous-loop',
+    aliases: ['autonomous development loop', 'autonomous loop'],
     term: 'Autonomous development loop',
     category: 'xanadu',
     short:
@@ -166,6 +177,7 @@ export const GLOSSARY: GlossaryEntry[] = [
   },
   {
     id: 'roadmap',
+    aliases: ['ROADMAP.md', 'ROADMAP', 'roadmap'],
     term: 'Roadmap',
     category: 'xanadu',
     short: 'The plan for a project, written as an ordered list of small tasks. Xanadu works straight from it.',
@@ -220,6 +232,7 @@ export const GLOSSARY: GlossaryEntry[] = [
   },
   {
     id: 'tests',
+    aliases: ['conformance test suite', 'test suite'],
     term: 'Tests',
     category: 'xanadu',
     short:
@@ -255,6 +268,7 @@ export const GLOSSARY: GlossaryEntry[] = [
   },
   {
     id: 'ladder',
+    aliases: ['tiers', 'escalate', 'escalates'],
     term: 'The ladder (tiers and escalation)',
     category: 'xanadu',
     short:
@@ -283,6 +297,7 @@ export const GLOSSARY: GlossaryEntry[] = [
   },
   {
     id: 'rule-promotion',
+    aliases: ['learned-rules promotion', 'rule promotion'],
     term: 'Rule promotion',
     category: 'xanadu',
     short:
@@ -292,6 +307,7 @@ export const GLOSSARY: GlossaryEntry[] = [
   },
   {
     id: 'velocity-log',
+    aliases: ['velocity report', 'velocity log'],
     term: 'Velocity log',
     category: 'xanadu',
     short: 'A record of every task: how long it took, how many attempts, and which model did it.',
@@ -320,6 +336,7 @@ export const GLOSSARY: GlossaryEntry[] = [
   // ---- Building and shipping software ----
   {
     id: 'agile',
+    aliases: ['agile'],
     term: 'Agile',
     category: 'delivery',
     short:
@@ -329,6 +346,7 @@ export const GLOSSARY: GlossaryEntry[] = [
   },
   {
     id: 'sprint',
+    aliases: ['sprints', 'sprint'],
     term: 'Sprint',
     category: 'delivery',
     short: 'A short, fixed stretch of work, usually one or two weeks, with a clear goal.',
@@ -383,6 +401,218 @@ export const GLOSSARY: GlossaryEntry[] = [
     body: 'Before modernising old code, tests are written that pin down exactly what it does now, quirks included. Then every change, by a person or by the loop, has to keep those tests passing, so nothing the business relies on breaks unnoticed.',
     related: ['tests', 'gate'],
   },
+
+  {
+    id: 'commit',
+    term: 'Commit',
+    category: 'delivery',
+    aliases: ['commit', 'commits'],
+    short:
+      'One saved change to a project’s code, with a note saying what changed. A project’s history is its list of commits.',
+    body: 'Code is kept in a version-control system (almost always Git) that records every change. Each recorded change is a commit, with who made it, when, and why. Counting commits is a rough measure of activity; reading them tells the story of a project.',
+    related: ['merge'],
+  },
+  {
+    id: 'spec',
+    term: 'Spec (specification)',
+    category: 'xanadu',
+    aliases: ['normative spec', 'spec-first'],
+    short:
+      'A short document that says exactly what the software must do. "Spec-first" means writing it, and its tests, before any code.',
+    body: 'A specification describes the rules precisely enough that two people would build the same thing from it. "Normative" means it is the authority: if the code and the spec disagree, the code is wrong. Writing the spec and its tests first gives Xanadu a target it can check itself against.',
+    related: ['kit', 'tests'],
+  },
+
+  // ---- The tech behind the projects ----
+  {
+    id: 'flutter',
+    term: 'Flutter',
+    category: 'stack',
+    aliases: ['Flutter'],
+    short: 'Google’s toolkit for building one app that runs on iPhone, Android and the web from the same code.',
+    body: 'Instead of writing an iPhone app and an Android app separately, a Flutter app is written once, in Dart, and runs on both, and in a browser.',
+    related: ['dart'],
+  },
+  {
+    id: 'dart',
+    term: 'Dart',
+    category: 'stack',
+    aliases: ['Dart'],
+    short: 'The programming language Flutter apps are written in, made by Google.',
+    body: 'A modern language designed for building apps. Most of the phone apps on this site are written in it.',
+    related: ['flutter'],
+  },
+  {
+    id: 'firebase',
+    term: 'Firebase',
+    category: 'stack',
+    aliases: ['Firebase'],
+    short:
+      'Google’s ready-made back end for apps: sign-in, a database, file storage and hosting, without running your own servers.',
+    body: 'Apps need somewhere to keep accounts and data. Firebase provides those pieces as a service, so a small team can ship an app without building and maintaining servers.',
+    related: ['firestore', 'cloud-functions'],
+  },
+  {
+    id: 'firestore',
+    term: 'Firestore',
+    category: 'stack',
+    aliases: ['Google Cloud Firestore', 'Firestore'],
+    short:
+      'Firebase’s database: keeps an app’s data in the cloud, syncs it between devices, and keeps working offline.',
+    body: 'A cloud database from Google. Changes on one phone appear on the others, and an app keeps working without signal and catches up when it reconnects.',
+    related: ['firebase'],
+  },
+  {
+    id: 'cloud-functions',
+    term: 'Cloud Functions',
+    category: 'stack',
+    aliases: ['Firebase Cloud Functions', 'GCP Cloud Functions', 'Cloud Functions'],
+    short: 'Small pieces of server code that run in Google’s cloud only when something triggers them, billed per use.',
+    body: 'For the jobs an app can’t do on the phone itself (calling an AI model with a secret key, sending a notification), a function runs in the cloud on demand. There is no server to keep running in between.',
+    related: ['firebase'],
+  },
+  {
+    id: 'nextjs',
+    term: 'Next.js',
+    category: 'stack',
+    aliases: ['Next.js'],
+    short: 'A popular framework for building websites and web apps with React. This site is built with it.',
+    body: 'Next.js takes care of pages, links, loading speed and search-engine friendliness, so the work goes into the product rather than the plumbing.',
+    related: ['react'],
+  },
+  {
+    id: 'react',
+    term: 'React',
+    category: 'stack',
+    aliases: ['React'],
+    short: 'A library, from Meta, for building interactive web pages out of reusable pieces.',
+    body: 'React lets a page be built from components (a button, a card, a chart) that update themselves when the data behind them changes. It is the most widely used way to build web interfaces.',
+    related: ['nextjs', 'react-native'],
+  },
+  {
+    id: 'react-native',
+    term: 'React Native',
+    category: 'stack',
+    aliases: ['React Native'],
+    short: 'React for phone apps: one set of code for both iPhone and Android.',
+    body: 'The same idea as Flutter, from the React world: write the app once and ship it to both app stores.',
+    related: ['react', 'flutter'],
+  },
+  {
+    id: 'typescript',
+    term: 'TypeScript',
+    category: 'stack',
+    aliases: ['TypeScript'],
+    short: 'JavaScript with a safety net: it catches many mistakes before the code ever runs.',
+    body: 'TypeScript adds types (this is a number, that is a date) to JavaScript, so tools can spot mismatches as the code is written. That makes it a good fit for AI-written code, because mistakes surface immediately.',
+    related: ['javascript', 'static-analysis'],
+  },
+  {
+    id: 'javascript',
+    term: 'JavaScript',
+    category: 'stack',
+    aliases: ['JavaScript'],
+    short: 'The programming language every web browser runs.',
+    body: 'Anything interactive on a web page runs on JavaScript. With Node.js it also runs on servers.',
+    related: ['typescript', 'nodejs'],
+  },
+  {
+    id: 'nodejs',
+    term: 'Node.js',
+    category: 'stack',
+    aliases: ['Node.js', 'Node/TypeScript'],
+    short: 'Runs JavaScript (and TypeScript) outside a browser: on servers, and for tools on a developer’s computer.',
+    body: 'Node.js lets the language of the web power back ends, scripts and command-line tools too.',
+    related: ['javascript', 'typescript'],
+  },
+  {
+    id: 'python',
+    term: 'Python',
+    category: 'stack',
+    aliases: ['Python'],
+    short: 'A widely used, readable programming language, and the usual choice for AI work. Xanadu is written in it.',
+    body: 'Python is popular for automation, data and AI because it is quick to write and has a library for almost everything.',
+  },
+  {
+    id: 'shell',
+    term: 'Shell scripts',
+    category: 'stack',
+    aliases: ['Shell'],
+    short: 'Lists of command-line instructions saved as a file, to automate jobs on a computer.',
+    body: 'The glue of software work: start this, wait for that, restart it if it stops. Xanadu’s supervisor, which keeps a run going overnight, is a shell script.',
+  },
+  {
+    id: 'tailwind',
+    term: 'Tailwind CSS',
+    category: 'stack',
+    aliases: ['Tailwind CSS'],
+    short: 'A way of styling web pages with short, ready-made style names written straight into the page.',
+    body: 'Instead of a separate style sheet, each element carries names like "rounded" or "text-gray-600". It keeps a site’s look consistent and is easy for AI models to get right.',
+  },
+  {
+    id: 'vitest',
+    term: 'Vitest',
+    category: 'stack',
+    aliases: ['Vitest'],
+    short: 'A tool that runs automated tests on JavaScript and TypeScript code.',
+    body: 'Vitest runs a project’s tests in seconds, which matters when a loop runs them on every attempt.',
+    related: ['tests'],
+  },
+  {
+    id: 'drizzle',
+    term: 'Drizzle',
+    category: 'stack',
+    aliases: ['Drizzle'],
+    short: 'A library that lets TypeScript code read and write a database safely.',
+    body: 'Drizzle describes the database’s tables in TypeScript, so a mistake in a query is caught before it runs.',
+    related: ['typescript'],
+  },
+  {
+    id: 'anthropic-api',
+    term: 'Anthropic API',
+    category: 'stack',
+    aliases: ['Anthropic API'],
+    short: 'The paid connection a program uses to send work to Claude, billed per token.',
+    body: 'Chat apps are for people; an API is for programs. Xanadu uses Anthropic’s API to reach Claude when a task has beaten every local model.',
+    related: ['frontier-model', 'tokens', 'ladder'],
+  },
 ];
 
 export const GLOSSARY_BY_ID: Record<string, GlossaryEntry> = Object.fromEntries(GLOSSARY.map((e) => [e.id, e]));
+
+// Lookups for linking terms inside text that comes from data (project pages): every alias, longest first, so
+// "local LLM tiers" matches "local LLM" before anything shorter.
+const ALIASES: { phrase: string; id: string }[] = GLOSSARY.flatMap((e) =>
+  [e.term, ...(e.aliases ?? [])].map((phrase) => ({ phrase, id: e.id })),
+).sort((a, b) => b.phrase.length - a.phrase.length);
+
+/** The entry a whole label (a project tag, say) names, if any. */
+export function entryForLabel(label: string): GlossaryEntry | undefined {
+  const l = label.trim().toLowerCase();
+  const hit = ALIASES.find((a) => a.phrase.toLowerCase() === l);
+  return hit ? GLOSSARY_BY_ID[hit.id] : undefined;
+}
+
+export type TextPiece = string | { id: string; text: string };
+
+/** Splits [text] into plain runs and terms to mark, for the ids in [allowed] only, each at most once per [seen]. */
+export function findTerms(text: string, allowed: readonly string[], seen: Set<string>): TextPiece[] {
+  const candidates = ALIASES.filter((a) => allowed.includes(a.id));
+  const pieces: TextPiece[] = [];
+  let rest = text;
+  for (;;) {
+    let best: { index: number; phrase: string; id: string } | null = null;
+    for (const a of candidates) {
+      if (seen.has(a.id)) continue;
+      const m = new RegExp(`(?<![\\w-])${a.phrase.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')}(?![\\w-])`, 'i').exec(rest);
+      if (m && (!best || m.index < best.index)) best = { index: m.index, phrase: m[0], id: a.id };
+    }
+    if (!best) break;
+    if (best.index > 0) pieces.push(rest.slice(0, best.index));
+    pieces.push({ id: best.id, text: best.phrase });
+    seen.add(best.id);
+    rest = rest.slice(best.index + best.phrase.length);
+  }
+  if (rest) pieces.push(rest);
+  return pieces;
+}

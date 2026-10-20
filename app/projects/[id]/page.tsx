@@ -7,6 +7,8 @@ import ProjectGallery from '@/components/ProjectGallery';
 import ProjectActions from '@/components/ProjectActions';
 import YouTubeFacade from '@/components/YouTubeFacade';
 import ProjectTags from '@/components/ProjectTags';
+import TermText from '@/components/TermText';
+import { PROJECT_TERMS, XANADU_LINE_TERMS } from '@/lib/projectTerms';
 import { PROJECTS, getStatusClasses, type Project } from '@/lib/projects';
 import { SITE } from '@/lib/constants';
 
@@ -23,8 +25,10 @@ function xanaduLine(project: Project): string {
   const n = project.xanaduTasks.toLocaleString('en-US');
   const ask = 'What could this way of building do for your team or your product?';
   if (project.id === 'xanadu') return `Xanadu works on its own codebase too — ${n} tasks so far. ${ask}`;
-  if (project.xanaduTasks >= 50) return `${project.name} was built with Xanadu, my autonomous development loop — ${n} tasks. ${ask}`;
-  if (project.xanaduTasks > 0) return `Xanadu, my autonomous development loop, has completed ${n} tasks on ${project.name}. ${ask}`;
+  if (project.xanaduTasks >= 50)
+    return `${project.name} was built with Xanadu, my autonomous development loop — ${n} tasks. ${ask}`;
+  if (project.xanaduTasks > 0)
+    return `Xanadu, my autonomous development loop, has completed ${n} tasks on ${project.name}. ${ask}`;
   return `Curious how I build products like ${project.name}? ${ask}`;
 }
 
@@ -64,6 +68,10 @@ export default async function ProjectPage({ params }: Props) {
     author: { '@type': 'Person', name: 'Jose Antonio Licon', url: SITE.url },
   };
 
+  // Each term is marked once per page: the first time it appears in the tagline, description or features.
+  const terms = PROJECT_TERMS[project.id] ?? [];
+  const seen = new Set<string>();
+
   return (
     <main className="max-w-3xl mx-auto px-6">
       <script
@@ -84,12 +92,16 @@ export default async function ProjectPage({ params }: Props) {
             {project.status}
           </span>
         </div>
-        <p className="text-base text-gray-600 leading-relaxed mb-6">{project.tagline}</p>
+        <p className="text-base text-gray-600 leading-relaxed mb-6">
+          <TermText text={project.tagline} allowed={terms} seen={seen} />
+        </p>
 
         <ProjectGallery name={project.name} screenshots={project.screenshots} />
 
         {project.description && (
-          <p className="text-[15px] text-gray-700 leading-relaxed mt-8">{project.description}</p>
+          <p className="text-[15px] text-gray-700 leading-relaxed mt-8">
+            <TermText text={project.description} allowed={terms} seen={seen} />
+          </p>
         )}
 
         {project.features.length > 0 && (
@@ -98,8 +110,12 @@ export default async function ProjectPage({ params }: Props) {
             <ul className="grid grid-cols-1 md:grid-cols-2 gap-x-6 gap-y-2">
               {project.features.map((feature) => (
                 <li key={feature} className="flex gap-2 text-sm text-gray-700 leading-snug">
-                  <span aria-hidden className="text-gray-400 select-none">—</span>
-                  <span>{feature}</span>
+                  <span aria-hidden className="text-gray-400 select-none">
+                    —
+                  </span>
+                  <span>
+                    <TermText text={feature} allowed={terms} seen={seen} />
+                  </span>
                 </li>
               ))}
             </ul>
@@ -122,8 +138,13 @@ export default async function ProjectPage({ params }: Props) {
       </article>
 
       <aside className="rounded-xl bg-[#0f0f0f] px-6 py-6 mb-8 flex flex-wrap items-center justify-between gap-4">
-        <p className="text-sm text-zinc-300 leading-relaxed max-w-md">{xanaduLine(project)}</p>
-        <Link href="/#contact" className="text-sm font-medium bg-white text-gray-900 hover:bg-zinc-200 transition-colors px-4 py-2 rounded-md whitespace-nowrap">
+        <p className="text-sm text-zinc-300 leading-relaxed max-w-md">
+          <TermText text={xanaduLine(project)} allowed={XANADU_LINE_TERMS} seen={new Set()} dark />
+        </p>
+        <Link
+          href="/#contact"
+          className="text-sm font-medium bg-white text-gray-900 hover:bg-zinc-200 transition-colors px-4 py-2 rounded-md whitespace-nowrap"
+        >
           Get more from AI →
         </Link>
       </aside>
@@ -132,7 +153,10 @@ export default async function ProjectPage({ params }: Props) {
         <Link href={`/projects/${prev.slug}`} className="text-gray-600 hover:text-gray-900 transition-colors">
           ← {prev.name}
         </Link>
-        <Link href={`/projects/${next.slug}`} className="text-gray-600 hover:text-gray-900 transition-colors text-right">
+        <Link
+          href={`/projects/${next.slug}`}
+          className="text-gray-600 hover:text-gray-900 transition-colors text-right"
+        >
           {next.name} →
         </Link>
       </nav>
