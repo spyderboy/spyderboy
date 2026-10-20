@@ -4,6 +4,7 @@ import stats from './stats.generated.json';
 export const NAV_LINKS = [
   { label: 'work', href: '/#projects' },
   { label: 'engine', href: '/#engine' },
+  { label: 'jargon', href: '/jargon' },
   { label: 'work with me', href: '/#contact' },
 ];
 

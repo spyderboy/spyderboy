@@ -1,21 +1,90 @@
 import { CONTACT } from '@/lib/constants';
 import BookButton from './BookButton';
+import Term from '@/components/Term';
 
 const OFFERS = [
   {
     who: 'For product leaders',
     title: 'Turn your roadmap into running software',
-    body: 'For technical PMs, product leads, and founders. I help you set up a local-first development loop and learn the workflow I use: shape a roadmap with a frontier model, hand the bulk of the build to an autonomous loop, then polish with an agentic assistant. You stop waiting on a queue and start shipping your own ideas.',
+    body: (
+      <>
+        For technical PMs, product leads, and founders. I help you set up a{' '}
+        <Term id="local-model" dark>
+          local-first
+        </Term>{' '}
+        development loop and learn the workflow I use: shape a{' '}
+        <Term id="roadmap" dark>
+          roadmap
+        </Term>{' '}
+        with a{' '}
+        <Term id="frontier-model" dark>
+          frontier model
+        </Term>
+        , hand the bulk of the build to an{' '}
+        <Term id="autonomous-loop" dark>
+          autonomous loop
+        </Term>
+        , then polish with an{' '}
+        <Term id="agentic-assistant" dark>
+          agentic assistant
+        </Term>
+        . You stop waiting on a queue and start shipping your own ideas.
+      </>
+    ),
   },
   {
     who: 'For dev teams',
     title: 'A measured pilot, not a promise',
-    body: 'For engineering leaders. We baseline one team’s cycle time, throughput, and escaped defects, set up the loop on your real backlog — with tests as the gate for “done” — and compare after about six weeks, with a first read at two. You keep the setup and the numbers either way.',
+    body: (
+      <>
+        For engineering leaders. We baseline one team’s{' '}
+        <Term id="cycle-time" dark>
+          cycle time
+        </Term>
+        ,{' '}
+        <Term id="throughput" dark>
+          throughput
+        </Term>
+        , and{' '}
+        <Term id="escaped-defects" dark>
+          escaped defects
+        </Term>
+        , set up the loop on your real{' '}
+        <Term id="backlog" dark>
+          backlog
+        </Term>{' '}
+        — with{' '}
+        <Term id="tests" dark>
+          tests
+        </Term>{' '}
+        as the{' '}
+        <Term id="gate" dark>
+          gate
+        </Term>{' '}
+        for “done” — and compare after about six weeks, with a first read at two. You keep the setup and the numbers
+        either way.
+      </>
+    ),
   },
   {
     who: 'For existing codebases',
     title: 'Modernize without the big rewrite',
-    body: 'Clean up, extend, port, or re-architect an existing codebase — splitting out services where it actually pays, not because it’s fashionable. We start with an assessment and a test safety net that pins down what the code does today, then the loop modernizes it in small, tested steps, and your code stays on hardware you control. Proven in Dart, TypeScript, Python, and Go; older languages welcome, COBOL included. If yours is new to the system, I’ll prove it out on a small project first, on me.',
+    body: (
+      <>
+        Clean up, extend, port, or re-architect an existing codebase — splitting out services where it actually pays,
+        not because it’s fashionable. We start with an assessment and a{' '}
+        <Term id="test-safety-net" dark>
+          test safety net
+        </Term>{' '}
+        that pins down what the code does today, then the loop modernizes it in small, tested steps, and your code stays
+        on{' '}
+        <Term id="hardware-you-control" dark>
+          hardware you control
+        </Term>
+        . Proven in Dart, TypeScript, Python, and Go; older languages welcome, COBOL included. If yours is new to the
+        system, I’ll prove it out on a small project first, on me.
+      </>
+    ),
   },
 ];
 
@@ -26,17 +95,15 @@ export default function Consulting() {
     <section id="contact" className="border-t border-gray-100 py-12 scroll-mt-6">
       <div className="rounded-2xl bg-[#0f0f0f] px-6 py-10 md:px-10">
         <p className="text-xs text-zinc-400 uppercase tracking-widest mb-6">Consulting</p>
-        <h2 className="text-2xl md:text-3xl font-medium text-white tracking-tight mb-6">
-          Get more from AI.
-        </h2>
+        <h2 className="text-2xl md:text-3xl font-medium text-white tracking-tight mb-6">Get more from AI.</h2>
         <div className="space-y-4 text-sm text-zinc-400 leading-relaxed max-w-xl">
           <p>
-            I turn product people into builders, and help dev teams ship more — and better — with
-            AI. ProjectsDash started as an idea one morning — and was working software three days later.
+            I turn product people into builders, and help dev teams ship more — and better — with AI. ProjectsDash
+            started as an idea one morning — and was working software three days later.
           </p>
           <p>
-            I spend most of my time building and traveling, so I&apos;m not looking for a full-time
-            role. I take on a few focused engagements at a time.
+            I spend most of my time building and traveling, so I&apos;m not looking for a full-time role. I take on a
+            few focused engagements at a time.
           </p>
         </div>
 
@@ -51,8 +118,11 @@ export default function Consulting() {
         </div>
 
         <p className="text-xs text-zinc-400 leading-relaxed max-w-xl mt-6">
-          A side effect: most of the work runs on open models on hardware you control, so your AI
-          bill grows far more slowly as you add developers.
+          A side effect: most of the work runs on{' '}
+          <Term id="open-model" dark>
+            open models
+          </Term>{' '}
+          on hardware you control, so your AI bill grows far more slowly as you add developers.
         </p>
 
         <div className="flex flex-wrap items-center gap-4 mt-8">

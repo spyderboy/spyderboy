@@ -27,3 +27,16 @@ html {
 .hero-thumb-paused {
   animation-play-state: paused;
 }
+
+/* /jargon: the entry an overlay's "explained" link (or a shared #anchor) lands on is briefly highlighted. */
+.jargon-entry:target {
+  animation: jargon-flash 2.4s ease-out;
+}
+@keyframes jargon-flash {
+  from {
+    background-color: rgb(254 243 199);
+  }
+  to {
+    background-color: transparent;
+  }
+}

@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Term from '@/components/Term';
 
 // Two measured cases (git history + Xanadu task logs): ProjectsDash for speed,
 // Galaxican for scale. Keep the numbers traceable to those sources.
@@ -7,7 +8,13 @@ const CASES = [
     href: '/projects/projectsdash',
     project: 'ProjectsDash',
     title: 'From an idea to a working tool in under three days',
-    body: 'I woke up with the idea, had a quick chat with Claude to shape a roadmap, and pointed Xanadu at it. On a single Mac, with a local model and no cloud bill, it worked through the roadmap largely unattended. Then I polished the rough edges with Claude.',
+    body: (
+      <>
+        I woke up with the idea, had a quick chat with Claude to shape a <Term id="roadmap">roadmap</Term>, and pointed
+        Xanadu at it. On a single Mac, with a <Term id="local-model">local model</Term> and no cloud bill, it worked
+        through the roadmap largely unattended. Then I polished the rough edges with Claude.
+      </>
+    ),
     facts: [
       ['2.75 days', 'first commit to finished roadmap'],
       ['49 of 49', 'roadmap tasks done — 35 by Xanadu'],
@@ -19,7 +26,13 @@ const CASES = [
     href: '/projects/galaxican',
     project: 'Galaxican',
     title: 'Scaling out when the roadmap is big',
-    body: 'Galaxican is where Xanadu was proven and hardened. For its biggest push, the same loop scaled out to parallel workers on a rented GPU — capacity that costs a few dollars an hour — and the game shipped to both app stores.',
+    body: (
+      <>
+        Galaxican is where Xanadu was proven and hardened. For its biggest push, the same loop scaled out to{' '}
+        <Term id="parallel-workers">parallel workers</Term> on a rented <Term id="gpu">GPU</Term> — capacity that costs
+        a few dollars an hour — and the game shipped to both app stores.
+      </>
+    ),
     facts: [
       ['626', 'tasks completed autonomously'],
       ['483', 'passed on the first attempt'],
@@ -48,7 +61,10 @@ export default function InPractice() {
                 </div>
               ))}
             </dl>
-            <Link href={c.href} className="mt-auto text-[13px] font-medium text-gray-900 hover:text-gray-600 transition-colors">
+            <Link
+              href={c.href}
+              className="mt-auto text-[13px] font-medium text-gray-900 hover:text-gray-600 transition-colors"
+            >
               See {c.project} →
             </Link>
           </article>
