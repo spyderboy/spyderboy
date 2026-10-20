@@ -4,6 +4,7 @@ import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import CalEmbed from '@/components/CalEmbed';
 import { CAL_URL, CONTACT, SITE } from '@/lib/constants';
+import Term from '@/components/Term';
 
 // Shareable booking page (email signatures, LinkedIn, proposals). On the home
 // page, "Book a call" opens the same calendar as a popup instead.
@@ -16,7 +17,14 @@ export const metadata: Metadata = {
   title,
   description,
   alternates: { canonical: `${SITE.url}/book` },
-  openGraph: { title, description, url: `${SITE.url}/book`, siteName: SITE.name, type: 'website', images: [SITE.avatar] },
+  openGraph: {
+    title,
+    description,
+    url: `${SITE.url}/book`,
+    siteName: SITE.name,
+    type: 'website',
+    images: [SITE.avatar],
+  },
   twitter: { card: 'summary', title, description, images: [SITE.avatar] },
 };
 
@@ -30,8 +38,8 @@ export default function BookPage() {
         <p className="text-xs text-gray-500 uppercase tracking-widest mb-6">Consulting</p>
         <h1 className="text-3xl font-medium tracking-tight text-gray-900 mb-4">Book a 30-minute call.</h1>
         <p className="text-sm text-gray-600 leading-relaxed max-w-xl">
-          Turning your roadmap into running software, or a measured AI pilot for your dev team.
-          Pick a time that works — or{' '}
+          Turning your <Term id="roadmap">roadmap</Term> into running software, or a measured AI{' '}
+          <Term id="pilot">pilot</Term> for your dev team. Pick a time that works — or{' '}
           <a href={mailto} className="font-medium text-gray-900 hover:text-gray-600 transition-colors">
             email {CONTACT.email}
           </a>

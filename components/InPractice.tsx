@@ -16,9 +16,19 @@ const CASES = [
       </>
     ),
     facts: [
-      ['2.75 days', 'first commit to finished roadmap'],
+      [
+        '2.75 days',
+        <>
+          first <Term id="commit">commit</Term> to finished roadmap
+        </>,
+      ],
       ['49 of 49', 'roadmap tasks done — 35 by Xanadu'],
-      ['4,455', 'lines of TypeScript, with test suites'],
+      [
+        '4,455',
+        <>
+          lines of <Term id="typescript">TypeScript</Term>, with test suites
+        </>,
+      ],
       ['$0', 'cloud compute: one laptop'],
     ],
   },
@@ -36,7 +46,12 @@ const CASES = [
     facts: [
       ['626', 'tasks completed autonomously'],
       ['483', 'passed on the first attempt'],
-      ['2 weeks', 'for the parallel sprint'],
+      [
+        '2 weeks',
+        <>
+          for the parallel <Term id="sprint">sprint</Term>
+        </>,
+      ],
       ['2 stores', 'App Store and Google Play'],
     ],
   },
@@ -54,10 +69,10 @@ export default function InPractice() {
             <p className="text-sm text-gray-600 leading-relaxed mb-5">{c.body}</p>
             <dl className="grid grid-cols-2 gap-x-4 gap-y-3 mb-5">
               {c.facts.map(([value, label]) => (
-                <div key={label}>
-                  <dt className="sr-only">{label}</dt>
-                  <dd className="text-lg font-medium text-gray-900 leading-none">{value}</dd>
-                  <dd className="text-xs text-gray-500 mt-1">{label}</dd>
+                // The label is the term (<dt>) and may hold jargon links; the number shows above it.
+                <div key={String(value)} className="flex flex-col">
+                  <dt className="order-2 text-xs text-gray-500 mt-1">{label}</dt>
+                  <dd className="order-1 text-lg font-medium text-gray-900 leading-none">{value}</dd>
                 </div>
               ))}
             </dl>

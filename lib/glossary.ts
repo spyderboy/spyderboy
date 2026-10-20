@@ -413,6 +413,32 @@ export const GLOSSARY: GlossaryEntry[] = [
     related: ['merge'],
   },
   {
+    id: 'pm',
+    term: 'PM (product manager)',
+    category: 'delivery',
+    aliases: ['PMs', 'PM'], // not "product manager": spelled out, it is a job title everyone knows
+    short: 'The person who decides what a product should do and in what order, and makes sure it gets built.',
+    body: 'A product manager talks to customers, sets priorities and writes the roadmap; engineers build it. A "technical PM" also understands how it is built well enough to shape it.',
+    related: ['roadmap', 'backlog'],
+  },
+  {
+    id: 'ip-address',
+    term: 'IP address',
+    category: 'delivery',
+    aliases: ['IP address', 'IP addresses'],
+    short: 'The number that identifies a device on the internet, roughly like a return address on a letter.',
+    body: 'Every device that connects to a website sends one, so that the reply can find its way back. Web hosts record them in standard logs; they can hint at a rough location but do not name a person.',
+  },
+  {
+    id: 'git',
+    term: 'Git',
+    category: 'delivery',
+    aliases: ['git'],
+    short: 'The system almost every software project uses to record every change to its code: who, when and why.',
+    body: 'Git keeps the full history of a project as a series of commits, and lets work happen on separate copies (branches) that are merged back when ready. Xanadu keeps its progress in Git, which is why a run can be stopped and picked up again.',
+    related: ['commit', 'merge'],
+  },
+  {
     id: 'spec',
     term: 'Spec (specification)',
     category: 'xanadu',

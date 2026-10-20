@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import Term from '@/components/Term';
 import CookieSettingsButton from '@/components/CookieSettingsButton';
 import { CONTACT, SITE } from '@/lib/constants';
 
@@ -30,23 +31,27 @@ export default function PrivacyPage() {
         <p className="text-xs text-gray-500 uppercase tracking-widest mb-6">Privacy</p>
         <h1 className="text-3xl font-medium tracking-tight text-gray-900 mb-4">Privacy</h1>
         <p className="text-sm text-gray-600 leading-relaxed">
-          spyderboy.com is the personal site of Jose Antonio Licon (Spyderboy Studio). It collects
-          as little as it can. Last updated {UPDATED}.
+          spyderboy.com is the personal site of Jose Antonio Licon (Spyderboy Studio). It collects as little as it can.
+          Last updated {UPDATED}.
         </p>
 
         <Section title="Analytics">
           <p>
-            The site uses Google Analytics 4 to count visits and see which projects and links people
-            use. If you visit from the EU, EEA, UK or Switzerland, it runs in Google&apos;s consent mode
-            without analytics cookies until you choose &ldquo;Allow&rdquo;, sending only basic,
-            cookieless signals. Elsewhere, analytics is on by default and you can turn it off with
-            &ldquo;Decline&rdquo;. When it&apos;s on, Google Analytics sets first-party cookies to
-            recognize repeat visits. Advertising features are off everywhere.
+            The site uses Google Analytics 4 to count visits and see which projects and links people use. If you visit
+            from the EU, EEA, UK or Switzerland, it runs in Google&apos;s consent mode without analytics cookies until
+            you choose &ldquo;Allow&rdquo;, sending only basic, cookieless signals. Elsewhere, analytics is on by
+            default and you can turn it off with &ldquo;Decline&rdquo;. When it&apos;s on, Google Analytics sets
+            first-party cookies to recognize repeat visits. Advertising features are off everywhere.
           </p>
           <p>
             You can change your choice at any time: <CookieSettingsButton className="underline hover:text-gray-900" />.
             Google&apos;s own practices are described in its{' '}
-            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-900">
+            <a
+              href="https://policies.google.com/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-gray-900"
+            >
               privacy policy
             </a>
             .
@@ -55,10 +60,15 @@ export default function PrivacyPage() {
 
         <Section title="Booking a call">
           <p>
-            &ldquo;Book a call&rdquo; opens a scheduler from Cal.com, which loads only when you use
-            it. Anything you enter there (your name, email, and notes) goes to Cal.com to schedule
-            the meeting and to me so I can prepare for it. See{' '}
-            <a href="https://cal.com/privacy" target="_blank" rel="noopener noreferrer" className="underline hover:text-gray-900">
+            &ldquo;Book a call&rdquo; opens a scheduler from Cal.com, which loads only when you use it. Anything you
+            enter there (your name, email, and notes) goes to Cal.com to schedule the meeting and to me so I can prepare
+            for it. See{' '}
+            <a
+              href="https://cal.com/privacy"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="underline hover:text-gray-900"
+            >
               Cal.com&apos;s privacy policy
             </a>
             .
@@ -67,17 +77,16 @@ export default function PrivacyPage() {
 
         <Section title="Videos and images">
           <p>
-            Demo videos use YouTube&apos;s privacy-enhanced mode and don&apos;t load the player
-            until you click play; the preview image comes from YouTube&apos;s image servers. The
-            site&apos;s share image is served by GitHub.
+            Demo videos use YouTube&apos;s privacy-enhanced mode and don&apos;t load the player until you click play;
+            the preview image comes from YouTube&apos;s image servers. The site&apos;s share image is served by GitHub.
           </p>
         </Section>
 
         <Section title="Email and hosting">
           <p>
-            If you email {CONTACT.email}, I use your message only to reply. The site is hosted on
-            Netlify, which keeps standard server logs (such as IP address and pages requested) to
-            run and secure the service.
+            If you email {CONTACT.email}, I use your message only to reply. The site is hosted on Netlify, which keeps
+            standard server logs (such as <Term id="ip-address">IP address</Term> and pages requested) to run and secure
+            the service.
           </p>
         </Section>
 

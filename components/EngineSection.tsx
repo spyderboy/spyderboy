@@ -14,8 +14,8 @@ const PARTS = [
         testable <Term id="task">tasks</Term>. An executor writes each change. A validator runs{' '}
         <Term id="static-analysis">static analysis</Term> and the task’s own <Term id="tests">tests</Term> — nothing
         counts as done until they <Term id="gate">pass</Term>. Failures are classified, fed back into the next attempt,
-        and escalated if they keep coming. All state lives in the roadmap and git, so a run survives being stopped and
-        picks up where it left off.
+        and escalated if they keep coming. All state lives in the roadmap and <Term id="git">git</Term>, so a run
+        survives being stopped and picks up where it left off.
       </>
     ),
   },
@@ -57,8 +57,8 @@ export default function EngineSection() {
       <p className="text-xs text-gray-500 uppercase tracking-widest mb-6">The engine</p>
       <h2 className="text-2xl font-medium text-gray-900 mb-4">Xanadu</h2>
       <p className="text-sm text-gray-600 leading-relaxed max-w-xl mb-8">
-        An autonomous development loop that compresses two weeks of work into two days of wall-clock time. Here&apos;s
-        how it works.
+        An <Term id="autonomous-loop">autonomous development loop</Term> that compresses two weeks of work into two days
+        of wall-clock time. Here&apos;s how it works.
       </p>
 
       <figure className="mb-8">

@@ -8,7 +8,11 @@ const OFFERS = [
     title: 'Turn your roadmap into running software',
     body: (
       <>
-        For technical PMs, product leads, and founders. I help you set up a{' '}
+        For technical{' '}
+        <Term id="pm" dark>
+          PMs
+        </Term>
+        , product leads, and founders. I help you set up a{' '}
         <Term id="local-model" dark>
           local-first
         </Term>{' '}
@@ -34,7 +38,15 @@ const OFFERS = [
   },
   {
     who: 'For dev teams',
-    title: 'A measured pilot, not a promise',
+    title: (
+      <>
+        A measured{' '}
+        <Term id="pilot" dark>
+          pilot
+        </Term>
+        , not a promise
+      </>
+    ),
     body: (
       <>
         For engineering leaders. We baseline one team’s{' '}
