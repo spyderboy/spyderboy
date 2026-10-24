@@ -41,7 +41,7 @@ export default function ConsentBanner() {
     <div
       role="region"
       aria-label="Cookie consent"
-      className="fixed inset-x-0 bottom-0 z-40 p-4 pointer-events-none"
+      className="fixed inset-x-0 bottom-0 z-40 p-4 pointer-events-none print:hidden"
     >
       <div className="pointer-events-auto mx-auto max-w-3xl rounded-xl border border-gray-200 bg-white shadow-lg px-5 py-4 flex flex-wrap items-center gap-4">
         <p className="flex-1 min-w-[220px] text-sm text-gray-700 leading-relaxed">

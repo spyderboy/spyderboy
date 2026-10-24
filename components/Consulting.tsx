@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import { CONTACT } from '@/lib/constants';
 import BookButton from './BookButton';
 import Term from '@/components/Term';
@@ -135,6 +136,13 @@ export default function Consulting() {
             open models
           </Term>{' '}
           on hardware you control, so your AI bill grows far more slowly as you add developers.
+        </p>
+
+        <p className="text-sm text-zinc-400 mt-6">
+          What happens after you hire me, step by step:{' '}
+          <Link href="/process" className="font-medium text-white hover:text-zinc-300 transition-colors">
+            how I build software →
+          </Link>
         </p>
 
         <div className="flex flex-wrap items-center gap-4 mt-8">

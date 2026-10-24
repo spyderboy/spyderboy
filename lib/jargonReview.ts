@@ -75,6 +75,7 @@ export const COPY_FILES: string[] = [
   'app/projects/[id]/page.tsx',
   'app/book/page.tsx',
   'app/privacy/page.tsx',
+  'app/process/page.tsx',
   'app/not-found.tsx',
 ];
 export const NOT_COPY_FILES: Record<string, string> = {

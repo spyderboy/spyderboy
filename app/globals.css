@@ -40,3 +40,18 @@ html {
     background-color: transparent;
   }
 }
+
+/* Printing: /process is printed to public/spyderboy-dev-process.pdf (npm run process-pdf). Terms print as plain text. */
+@page {
+  size: letter;
+  margin: 0.5in;
+}
+@media print {
+  /* Tailwind sizes are in rem, so this shrinks the page to fit one sheet. */
+  html {
+    font-size: 13px;
+  }
+  a[aria-haspopup="dialog"] {
+    text-decoration: none;
+  }
+}
