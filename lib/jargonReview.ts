@@ -27,6 +27,14 @@ export const NOT_JARGON: Record<string, string> = {
   'MacBook Air': 'a laptop everyone knows',
   Netlify: 'the web host, described as such in the privacy notice',
   Xanadu: 'the system this site is about; explained in the Engine section and on its own page',
+  EstateWise: 'a project of mine, the subject of its own walkthrough page',
+  'dashboard.png': 'an image path in the walkthrough page metadata, not shown to visitors',
+  Paid: 'one of the app’s rent labels, quoted as the app shows it',
+  Partial: 'one of the app’s rent labels, quoted as the app shows it',
+  Unpaid: 'one of the app’s rent labels, quoted as the app shows it',
+  Vacant: 'one of the app’s rent labels, quoted as the app shows it',
+  Venmo: 'a payment app everyone knows',
+  'Cash App': 'a payment app everyone knows',
   Engine: 'the name of a section on this page',
   Pittsburgh: 'a place',
   Switzerland: 'a place',
@@ -63,6 +71,8 @@ export const NOT_JARGON: Record<string, string> = {
 // Files whose text is site copy, checked for terms and possible jargon. Every .tsx file under components/ and
 // app/ must be in COPY_FILES or NOT_COPY_FILES, so a new file gets a decision.
 export const COPY_FILES: string[] = [
+  'app/estatewise/page.tsx',
+  'components/Walkthrough.tsx',
   'components/Hero.tsx',
   'components/XanaduIntro.tsx',
   'components/EngineSection.tsx',
