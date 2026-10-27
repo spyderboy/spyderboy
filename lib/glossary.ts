@@ -449,6 +449,16 @@ export const GLOSSARY: GlossaryEntry[] = [
     related: ['kit', 'tests'],
   },
 
+  {
+    id: 'crm',
+    term: 'CRM',
+    category: 'delivery',
+    aliases: ['CRM'],
+    short:
+      'Customer relationship management: an app that remembers everyone you deal with, what was said and done, and how it all connects.',
+    body: 'CRM stands for customer relationship management. Businesses use one to keep every contact, conversation and piece of history in one place instead of in inboxes and memory. EstateWise is a small one for our own rentals: the people are tenants, relatives and contractors, and the history is repairs, rent and notes.',
+    analogy: 'A very good address book that also remembers every conversation.',
+  },
   // ---- The tech behind the projects ----
   {
     id: 'flutter',

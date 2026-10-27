@@ -4,6 +4,7 @@
 export const PROJECT_TERMS: Record<string, readonly string[]> = {
   xanadu: ['autonomous-loop', 'roadmap', 'task', 'local-model', 'ladder', 'velocity-log', 'rule-promotion'],
   personalagile: ['agile', 'sprint'],
+  estatewiseflutter: ['crm'],
   'witches-bricks': ['spec', 'tests'],
   projectsdash: ['commit', 'roadmap', 'local-model', 'runpod', 'gpu', 'agentic-assistant'],
 };

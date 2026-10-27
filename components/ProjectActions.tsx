@@ -17,7 +17,8 @@ function External({ href, className, children }: { href: string; className: stri
 // A project's CTA (e.g. a time-limited promo, or a jump to a home-page section),
 // then the official store badges, then the site link — shared by card and page.
 export default function ProjectActions({ project }: { project: Project }) {
-  const internal = project.cta?.url.startsWith('#') ?? false;
+  // On this site: a home-page section ('#engine') or a page ('/estatewise'). Anything else is another site.
+  const internal = project.cta ? /^[#/]/.test(project.cta.url) : false;
   const ctaHost = project.cta && !internal ? new URL(project.cta.url).host : null;
   // Skip the plain site button when the CTA already points at the same site.
   const showSite = !!project.liveUrl && ctaHost !== new URL(project.liveUrl).host;
@@ -30,7 +31,9 @@ export default function ProjectActions({ project }: { project: Project }) {
       {project.cta &&
         (internal ? (
           // Absolute so it also works from /projects/<id>.
-          <a href={`/${project.cta.url}`} className={PRIMARY}>{project.cta.label} →</a>
+          <a href={project.cta.url.startsWith('#') ? `/${project.cta.url}` : project.cta.url} className={PRIMARY}>
+            {project.cta.label} →
+          </a>
         ) : (
           <External href={project.cta.url} className={PRIMARY}>{project.cta.label} ↗</External>
         ))}

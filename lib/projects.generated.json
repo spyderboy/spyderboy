@@ -270,6 +270,69 @@
     ]
   },
   {
+    "id": "estatewiseflutter",
+    "name": "EstateWise",
+    "status": "For our own use",
+    "tagline": "A CRM for our own rentals: buildings, units, people and repairs, connected.",
+    "description": "The memory of our rental units in one place: who lives where and who referred whom, every repair, conversation and\nrent change on a timeline, costs and profit per building, photos of every key. It works offline in a basement and\nsyncs when the phone reconnects. Built by Xanadu, for our own use, not for sale.",
+    "features": [
+      "Buildings, units, rent, repairs, appliances and keys, saved to the cloud and usable offline",
+      "People and how they connect: tenants, occupants, family, referrals, vendors",
+      "A timeline for every person, unit and building",
+      "Notes and photos linked to anything",
+      "Rent, costs and profit per building",
+      "A log of every change: who, when, before and after"
+    ],
+    "tags": [
+      "Flutter",
+      "Firebase"
+    ],
+    "languages": [
+      "Dart",
+      "TypeScript"
+    ],
+    "xanaduTasks": 352,
+    "liveUrl": null,
+    "appStore": null,
+    "playStore": null,
+    "storeLabel": null,
+    "cta": {
+      "label": "See the walkthrough",
+      "url": "/estatewise"
+    },
+    "demoVideo": null,
+    "screenshots": [
+      {
+        "src": "/images/projects/estatewiseflutter/01.jpg",
+        "caption": "Buildings, the dashboard and a person"
+      },
+      {
+        "src": "/images/projects/estatewiseflutter/02.jpg",
+        "caption": "Dashboard"
+      },
+      {
+        "src": "/images/projects/estatewiseflutter/03.jpg",
+        "caption": "Buildings and who lives in each unit"
+      },
+      {
+        "src": "/images/projects/estatewiseflutter/04.jpg",
+        "caption": "A unit: residents, lease, repairs"
+      },
+      {
+        "src": "/images/projects/estatewiseflutter/05.jpg",
+        "caption": "A person: where they live, connections, timeline"
+      },
+      {
+        "src": "/images/projects/estatewiseflutter/06.jpg",
+        "caption": "People"
+      },
+      {
+        "src": "/images/projects/estatewiseflutter/07.jpg",
+        "caption": "Finances"
+      }
+    ]
+  },
+  {
     "id": "witches-bricks",
     "name": "Witch's Bricks",
     "status": "In development",
