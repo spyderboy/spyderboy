@@ -8,7 +8,7 @@ import { SITE } from '@/lib/constants';
 
 const TITLE = `EstateWise walkthrough — ${SITE.name}`;
 const DESCRIPTION =
-  'A screen-by-screen tour of EstateWise, the app I built to run our own rental buildings: units, tenants, rent, repairs, keys and finances.';
+  'A screen-by-screen tour of EstateWise, the app I built to run our own rental buildings: units, the people in them, rent, repairs, keys and finances, each with its own history.';
 
 export const metadata: Metadata = {
   title: TITLE,
@@ -46,20 +46,20 @@ const SLIDES: WalkthroughSlide[] = [
     title: 'The dashboard',
     body: 'The first screen is the whole portfolio at a glance.',
     points: [
-      'Buildings, units (vacancies flagged), tenants and open repairs; tap a number to open that list.',
+      'Buildings, units (vacancies flagged), the people living in them, and open repairs; tap a number to open that list.',
       'Rent collected this month, compared with the same month last year.',
       'Month-by-month charts of rent collected and repair spending.',
       'The bar along the bottom stays on every page, so any section is one tap away.',
     ],
-    screens: [screen('dashboard', 'Dashboard', 1150)],
+    screens: [screen('dashboard', 'Dashboard', 973)],
   },
   {
     chapter: 'Property',
     title: 'Buildings',
-    body: 'Every building with its units, who lives in each one, and whether this month’s rent is in.',
+    body: 'Every building with its units, who lives in each one today, and whether this month’s rent is in.',
     points: [
       'Each building shows how many units it has and how many are empty.',
-      'Each unit shows its tenant and a rent label: Paid, Partial, Unpaid or Vacant.',
+      'Each unit shows who lives there and a rent label: Paid, Partial, Unpaid or Vacant.',
       'Tap a building or a unit to open it; the + button adds a building.',
     ],
     screens: [screen('buildings', 'Buildings')],
@@ -67,15 +67,15 @@ const SLIDES: WalkthroughSlide[] = [
   {
     chapter: 'Property',
     title: 'A building',
-    body: 'One page per building: what it cost, what it costs to run, and which way it is heading.',
+    body: 'One page per building: what it cost, what it costs to run, and everything that has happened there.',
     points: [
       'Purchase price and date, and the yearly property tax, as headline figures.',
-      'Add an apartment, open the building’s keys, or log a repair.',
-      'Rent and repair costs compared with last year.',
+      'Add an apartment, open the building’s keys, log a repair, or add a note.',
       'Running costs: the mortgage payment and the utilities you pay.',
-      'Repairs, photos, tax history and charts further down.',
+      'A timeline of the whole building, newest first: repairs, conversations, notes and move-ins, across every unit.',
+      'Photos, tax history and charts further down.',
     ],
-    screens: [screen('building', 'Building', 1750)],
+    screens: [screen('building', 'Building', 2376)],
   },
   {
     chapter: 'Property',
@@ -83,11 +83,11 @@ const SLIDES: WalkthroughSlide[] = [
     body: 'Everything about one unit on one page.',
     points: [
       'Current rent and this month’s rent status at the top, with floor, bedrooms and key colour.',
-      'Record a payment, see the appliances, or add a tenant.',
-      'The tenant, the lease dates and the security deposit.',
-      'The unit’s repairs, its rent history, photos, and charts of rent and repair costs.',
+      'Who lives here: the current residents, a Move out button for each, and Move in for someone new.',
+      'The lease dates and security deposit, the unit’s repairs and rent history, and its photos.',
+      'The unit’s own timeline, and charts of rent and repair costs.',
     ],
-    screens: [screen('apartment', 'Apartment', 1800)],
+    screens: [screen('apartment', 'Apartment', 2031)],
   },
   {
     chapter: 'Property',
@@ -96,7 +96,7 @@ const SLIDES: WalkthroughSlide[] = [
     points: [
       'Record a payment: amount, date and how it was paid (check, cash, money order, Venmo, Cash App).',
       'Edit the unit: number, floor, bedrooms, deposit, lease dates and key colour.',
-      'Appliances: the stove, fridge, boiler and the rest in each unit, with brand and condition.',
+      'Appliances: the stove, fridge, water heater and the rest in each unit, with age and condition.',
     ],
     screens: [
       screen('payment', 'Record payment'),
@@ -109,20 +109,69 @@ const SLIDES: WalkthroughSlide[] = [
     title: 'Keys',
     body: 'Every key for every building: who has it and how many copies exist.',
     points: [
-      'Keys for the common areas and for each unit.',
-      'Each key has a photo, the number of copies held, who holds them, and notes.',
+      'The keyring photo, then keys for the common areas and for each unit.',
+      'Each key has a photo, what it opens, the number of copies held, who holds them, and notes.',
     ],
     screens: [screen('keys', 'Keys'), screen('key', 'One key')],
   },
   {
     chapter: 'People',
-    title: 'Tenants',
-    body: 'Who lives where, and their payment record.',
+    title: 'Everyone we deal with',
+    body: 'One list of people: tenants and the others who live with them, their families, who referred them, the handyman and vendors.',
     points: [
-      'The list shows each tenant’s unit and phone number.',
-      'A tenant’s page: contact details, job and income, pets, next of kin, and every payment from their unit.',
+      'Search by name, or filter to current tenants or to one kind of person.',
+      'A person can be several things at once: a tenant who referred a friend, a relative who is the emergency contact.',
+      'The + button adds someone.',
     ],
-    screens: [screen('tenants', 'Tenants'), screen('tenant', 'A tenant', 1500)],
+    screens: [screen('people', 'People', 1023)],
+  },
+  {
+    chapter: 'People',
+    title: 'A person',
+    body: 'Everything about one person on one page.',
+    points: [
+      'Contact details and what they do.',
+      'Where they live, and where they lived before, with move-in and move-out dates.',
+      'Connections: family, friends, emergency contacts, and who referred whom, followed back as a referral chain.',
+      'Their timeline: conversations, notes, moves and connections, newest first. Tap any entry to open it.',
+      'Family and connection details are a memory aid only. They never decide who rents or renews.',
+    ],
+    screens: [screen('person', 'A person', 1131)],
+  },
+  {
+    chapter: 'People',
+    title: 'Moving in, connections and details',
+    body: 'The entry screens for people.',
+    points: [
+      'Move someone in: who, which unit, leaseholder or occupant, the date, pets and smoking.',
+      'Add a connection between two people: family, friend, coworker, roommate, emergency contact, or who referred whom.',
+      'Edit a person’s details and what kind of person they are.',
+    ],
+    screens: [
+      screen('move_in', 'Move in'),
+      screen('relationship_form', 'Add a connection'),
+      screen('person_form', 'Edit a person'),
+    ],
+  },
+  {
+    chapter: 'People',
+    title: 'Conversations and notes',
+    body: 'What was said and done, written down where it will be found again.',
+    points: [
+      'Log a conversation (in person, phone, text or email), an event, or a plain note, with photos.',
+      'Mark who was involved, and attach it to people, units and buildings: it then appears on each of their timelines.',
+    ],
+    screens: [screen('conversation', 'Log a conversation')],
+  },
+  {
+    chapter: 'People',
+    title: 'History',
+    body: 'Every change to every record is kept: what changed, when, and what it was before.',
+    points: [
+      'Open a person’s history to see each edit, oldest value and new value side by side.',
+      'Nothing is lost by a mistaken edit: the earlier value is always there to look up.',
+    ],
+    screens: [screen('history', 'History')],
   },
   {
     chapter: 'Money',
@@ -133,7 +182,7 @@ const SLIDES: WalkthroughSlide[] = [
       'Rent over time, how tenants pay, and income against expenses.',
       'The portfolio report: profit over time, and a profit-and-loss summary for each building.',
     ],
-    screens: [screen('finances', 'Finances', 1300), screen('report', 'Portfolio report')],
+    screens: [screen('finances', 'Finances', 998), screen('report', 'Portfolio report')],
   },
   {
     chapter: 'Repairs',
@@ -143,7 +192,7 @@ const SLIDES: WalkthroughSlide[] = [
       'Spending on repairs month by month, then every repair with contractor, cost and status.',
       'A repair’s page splits parts from labour and shows when it was planned, started and finished.',
     ],
-    screens: [screen('repairs', 'All repairs'), screen('repair', 'One repair'), screen('repair_form', 'New repair')],
+    screens: [screen('repairs', 'All repairs', 1123), screen('repair', 'One repair'), screen('repair_form', 'New repair')],
   },
   {
     chapter: 'Account',
@@ -156,15 +205,13 @@ const SLIDES: WalkthroughSlide[] = [
   },
   {
     chapter: 'Next',
-    title: 'Being built now',
-    body: 'Xanadu is building the next part of EstateWise as you read this. It adds people and history to every record.',
+    title: 'What comes next',
+    body: 'The app is ready for our real records. Those come next, then a way to ask it questions.',
     points: [
-      'A People tab: tenants, emergency contacts, referrers, vendors and the handyman in one list.',
-      'Who lives here, on each apartment: current and past residents, with move-in and move-out dates.',
-      'Notes with photos, attached to a person, a unit or a building.',
-      'A timeline on each unit and building: repairs, rent changes, residents and notes in date order.',
+      'Loading what we already have: photos filed by building and unit, and the yearly tax packets.',
+      'Then asking in plain words: who referred the tenant in 3B, what did we last talk about with a vendor, what did the Oak Ave boiler cost since 2023.',
     ],
-    screens: [screen('dashboard', 'Dashboard today', 1150)],
+    screens: [screen('dashboard', 'Dashboard today', 973)],
   },
 ];
 
@@ -176,8 +223,8 @@ export default function EstateWisePage() {
         <p className="text-xs text-gray-500 uppercase tracking-widest mb-6">Walkthrough</p>
         <h1 className="text-3xl font-medium tracking-tight text-gray-900 mb-4">EstateWise</h1>
         <p className="text-sm text-gray-600 leading-relaxed max-w-2xl mb-10">
-          The app I built to run our own rental buildings: the memory of every building, unit, tenant, payment,
-          repair and key, in one place on my phone, and how each building is doing over time. It is for our own use,
+          The app I built to run our own rental buildings: the memory of every building, unit, person, payment,
+          repair, key and conversation, in one place on my phone, and how each building is doing over time. It is for our own use,
           not for sale. Built with{' '}
           <Link href="/#engine" className="text-gray-900 underline underline-offset-2">
             Xanadu
