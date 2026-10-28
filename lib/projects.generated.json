@@ -28,6 +28,8 @@
       "label": "How it works",
       "url": "#engine"
     },
+    "download": null,
+    "highlight": null,
     "demoVideo": null,
     "screenshots": [
       {
@@ -41,6 +43,74 @@
       {
         "src": "/images/projects/xanadu/03.jpg",
         "caption": "Supervisor run — ROADMAP finished unattended, then the learned-rules promotion pass"
+      }
+    ]
+  },
+  {
+    "id": "estatewiseflutter",
+    "name": "EstateWise",
+    "status": "For our own use",
+    "tagline": "Our own rental business, run from one app: built by one person with Xanadu in about two months.",
+    "description": "EstateWise holds everything about our rental units in one place: every building, unit, person, repair, key and\nconversation, connected and on a timeline, with costs and profit per building. It is for our own use, not for sale.\nIt is also how I work for clients: a real business problem, a written plan, and Xanadu building it in small,\nreviewed steps, each one checked by its own test.",
+    "features": [
+      "One place for every building, unit, person, repair, key and conversation",
+      "Who lives where, who referred whom, and what was said, on a timeline for each person, unit and building",
+      "Rent, costs and profit per building, month by month",
+      "Works with no signal in a basement and catches up when back online",
+      "Every change recorded: who made it, when, and what it was before",
+      "Built in planned stages, each a written spec and a test for every step, so progress is visible and checkable"
+    ],
+    "tags": [
+      "Flutter",
+      "Firebase"
+    ],
+    "languages": [
+      "Dart",
+      "TypeScript"
+    ],
+    "xanaduTasks": 352,
+    "liveUrl": null,
+    "appStore": null,
+    "playStore": null,
+    "storeLabel": null,
+    "cta": {
+      "label": "See the walkthrough",
+      "url": "/estatewise"
+    },
+    "download": {
+      "label": "Walkthrough PDF",
+      "url": "/downloads/EstateWise-walkthrough.pdf"
+    },
+    "highlight": "Case study",
+    "demoVideo": null,
+    "screenshots": [
+      {
+        "src": "/images/projects/estatewiseflutter/01.jpg",
+        "caption": "Buildings, the dashboard and a person"
+      },
+      {
+        "src": "/images/projects/estatewiseflutter/02.jpg",
+        "caption": "Dashboard"
+      },
+      {
+        "src": "/images/projects/estatewiseflutter/03.jpg",
+        "caption": "Buildings and who lives in each unit"
+      },
+      {
+        "src": "/images/projects/estatewiseflutter/04.jpg",
+        "caption": "A unit: residents, lease, repairs"
+      },
+      {
+        "src": "/images/projects/estatewiseflutter/05.jpg",
+        "caption": "A person: where they live, connections, timeline"
+      },
+      {
+        "src": "/images/projects/estatewiseflutter/06.jpg",
+        "caption": "People"
+      },
+      {
+        "src": "/images/projects/estatewiseflutter/07.jpg",
+        "caption": "Finances"
       }
     ]
   },
@@ -77,6 +147,8 @@
       "label": "Get it free while codes last",
       "url": "https://galaxican.com"
     },
+    "download": null,
+    "highlight": null,
     "demoVideo": "c89YFJSFUJ8",
     "screenshots": [
       {
@@ -131,6 +203,8 @@
     "playStore": null,
     "storeLabel": null,
     "cta": null,
+    "download": null,
+    "highlight": null,
     "demoVideo": null,
     "screenshots": [
       {
@@ -193,6 +267,8 @@
     "playStore": "https://play.google.com/store/apps/details?id=com.retrocarradio.app",
     "storeLabel": null,
     "cta": null,
+    "download": null,
+    "highlight": null,
     "demoVideo": "8y1uT_YqkMk",
     "screenshots": [
       {
@@ -249,6 +325,8 @@
     "playStore": null,
     "storeLabel": null,
     "cta": null,
+    "download": null,
+    "highlight": null,
     "demoVideo": null,
     "screenshots": [
       {
@@ -266,69 +344,6 @@
       {
         "src": "/images/projects/hootpgh/04.jpg",
         "caption": "Events — search, filters, list/calendar views"
-      }
-    ]
-  },
-  {
-    "id": "estatewiseflutter",
-    "name": "EstateWise",
-    "status": "For our own use",
-    "tagline": "A CRM for our own rentals: buildings, units, people and repairs, connected.",
-    "description": "The memory of our rental units in one place: who lives where and who referred whom, every repair, conversation and\nrent change on a timeline, costs and profit per building, photos of every key. It works offline in a basement and\nsyncs when the phone reconnects. Built by Xanadu, for our own use, not for sale.",
-    "features": [
-      "Buildings, units, rent, repairs, appliances and keys, saved to the cloud and usable offline",
-      "People and how they connect: tenants, occupants, family, referrals, vendors",
-      "A timeline for every person, unit and building",
-      "Notes and photos linked to anything",
-      "Rent, costs and profit per building",
-      "A log of every change: who, when, before and after"
-    ],
-    "tags": [
-      "Flutter",
-      "Firebase"
-    ],
-    "languages": [
-      "Dart",
-      "TypeScript"
-    ],
-    "xanaduTasks": 352,
-    "liveUrl": null,
-    "appStore": null,
-    "playStore": null,
-    "storeLabel": null,
-    "cta": {
-      "label": "See the walkthrough",
-      "url": "/estatewise"
-    },
-    "demoVideo": null,
-    "screenshots": [
-      {
-        "src": "/images/projects/estatewiseflutter/01.jpg",
-        "caption": "Buildings, the dashboard and a person"
-      },
-      {
-        "src": "/images/projects/estatewiseflutter/02.jpg",
-        "caption": "Dashboard"
-      },
-      {
-        "src": "/images/projects/estatewiseflutter/03.jpg",
-        "caption": "Buildings and who lives in each unit"
-      },
-      {
-        "src": "/images/projects/estatewiseflutter/04.jpg",
-        "caption": "A unit: residents, lease, repairs"
-      },
-      {
-        "src": "/images/projects/estatewiseflutter/05.jpg",
-        "caption": "A person: where they live, connections, timeline"
-      },
-      {
-        "src": "/images/projects/estatewiseflutter/06.jpg",
-        "caption": "People"
-      },
-      {
-        "src": "/images/projects/estatewiseflutter/07.jpg",
-        "caption": "Finances"
       }
     ]
   },
@@ -361,6 +376,8 @@
       "label": "How it's built",
       "url": "#engine"
     },
+    "download": null,
+    "highlight": null,
     "demoVideo": null,
     "screenshots": [
       {
@@ -411,6 +428,8 @@
       "label": "How it's built",
       "url": "#engine"
     },
+    "download": null,
+    "highlight": null,
     "demoVideo": null,
     "screenshots": [
       {

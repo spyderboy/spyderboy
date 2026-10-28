@@ -24,7 +24,7 @@ export default function ProjectActions({ project }: { project: Project }) {
   const showSite = !!project.liveUrl && ctaHost !== new URL(project.liveUrl).host;
   const host = project.liveUrl ? new URL(project.liveUrl).host.replace(/^www\./, '') : null;
 
-  if (!project.cta && !project.appStore && !project.playStore && !showSite) return null;
+  if (!project.cta && !project.download && !project.appStore && !project.playStore && !showSite) return null;
 
   return (
     <div className="flex flex-wrap items-center gap-3">
@@ -37,6 +37,11 @@ export default function ProjectActions({ project }: { project: Project }) {
         ) : (
           <External href={project.cta.url} className={PRIMARY}>{project.cta.label} ↗</External>
         ))}
+      {project.download && (
+        <a href={project.download.url} download className={SECONDARY}>
+          {project.download.label} ↓
+        </a>
+      )}
       {project.storeLabel && (project.appStore || project.playStore) && (
         <span className="text-[13px] text-gray-500">{project.storeLabel}</span>
       )}

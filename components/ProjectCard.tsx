@@ -9,7 +9,13 @@ export default function ProjectCard({ project }: { project: Project }) {
   const { bg, text } = getStatusClasses(project.status);
 
   return (
-    <article id={project.id} className="border border-gray-100 hover:border-gray-300 transition-colors rounded-xl p-5 scroll-mt-6">
+    <article
+      id={project.id}
+      className={`border ${project.highlight ? 'border-gray-300 shadow-sm' : 'border-gray-100'} hover:border-gray-400 transition-colors rounded-xl p-5 scroll-mt-6`}
+    >
+      {project.highlight && (
+        <p className="text-[11px] font-medium uppercase tracking-widest text-gray-500 mb-2">{project.highlight}</p>
+      )}
       <div className="flex items-start justify-between gap-4 mb-1">
         <h3 className="text-[17px] font-medium text-gray-900">
           <Link href={`/projects/${project.slug}`} className="hover:text-gray-600 transition-colors">

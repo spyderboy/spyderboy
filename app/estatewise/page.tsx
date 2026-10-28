@@ -222,21 +222,45 @@ export default function EstateWisePage() {
       <article className="pt-10 pb-16">
         <p className="text-xs text-gray-500 uppercase tracking-widest mb-6">Walkthrough</p>
         <h1 className="text-3xl font-medium tracking-tight text-gray-900 mb-4">EstateWise</h1>
-        <p className="text-sm text-gray-600 leading-relaxed max-w-2xl mb-10">
+        <p className="text-sm text-gray-600 leading-relaxed max-w-2xl mb-4">
           The app I built to run our own rental buildings: the memory of every building, unit, person, payment,
-          repair, key and conversation, in one place on my phone, and how each building is doing over time. It is for our own use,
-          not for sale. Built with{' '}
+          repair, key and conversation, in one place on my phone, and how each building is doing over time. It is for
+          our own use, not for sale. The screens below use the app’s built-in sample data, not our real records.
+        </p>
+        <p className="text-sm text-gray-600 leading-relaxed max-w-2xl mb-6">
+          It is also a working example of how I build for clients: one person sets the direction, a short written plan
+          defines each stage, and{' '}
           <Link href="/#engine" className="text-gray-900 underline underline-offset-2">
             Xanadu
-          </Link>
-          . The screens below use the app’s built-in sample data, not our real records.
+          </Link>{' '}
+          builds it in small steps, each checked by its own test. About two months from the first line to what you see
+          here.
         </p>
+        <div className="flex flex-wrap items-center gap-3 mb-10">
+          <a
+            href="/downloads/EstateWise-walkthrough.pdf"
+            download
+            className="text-sm rounded-lg border border-gray-200 px-4 py-2 text-gray-900 hover:border-gray-400 transition-colors"
+          >
+            Download the walkthrough (PDF) ↓
+          </a>
+          <span className="text-xs text-gray-500">18 pages, to read offline or share with your team.</span>
+        </div>
         <Walkthrough slides={SLIDES} />
         <div className="mt-16 rounded-xl border border-gray-100 p-6 flex flex-wrap items-center justify-between gap-4">
           <p className="text-sm text-gray-600">Need a tool like this built for your own business?</p>
-          <BookButton className="text-sm rounded-lg bg-gray-900 px-4 py-2 text-white hover:bg-gray-700 transition-colors">
-            Book a call
-          </BookButton>
+          <div className="flex flex-wrap items-center gap-3">
+            <a
+              href="/downloads/EstateWise-walkthrough.pdf"
+              download
+              className="text-sm rounded-lg border border-gray-200 px-4 py-2 text-gray-900 hover:border-gray-400 transition-colors"
+            >
+              Walkthrough PDF ↓
+            </a>
+            <BookButton className="text-sm rounded-lg bg-gray-900 px-4 py-2 text-white hover:bg-gray-700 transition-colors">
+              Book a call
+            </BookButton>
+          </div>
         </div>
       </article>
       <Footer />

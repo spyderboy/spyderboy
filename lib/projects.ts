@@ -24,6 +24,8 @@ export interface Project {
   playStore: string | null;
   storeLabel: string | null;
   cta: { label: string; url: string } | null;
+  download: { label: string; url: string } | null; // a file on this site, e.g. a walkthrough PDF
+  highlight: string | null; // a small label above the name on the home-page card, e.g. "Case study"
   demoVideo: string | null;
   screenshots: Screenshot[];
 }
