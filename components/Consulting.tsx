@@ -146,7 +146,7 @@ export default function Consulting() {
           </Link>
         </p>
 
-        <div className="mt-10 border-t border-zinc-800 pt-8">
+        <div id="contact-form" className="mt-10 border-t border-zinc-800 pt-8 scroll-mt-6">
           <h3 className="text-lg font-medium text-white tracking-tight mb-2">Start with a few lines.</h3>
           <p className="text-sm text-zinc-400 leading-relaxed max-w-xl mb-6">
             Tell me what you&apos;re trying to build or what&apos;s stuck. I&apos;ll reply with how I&apos;d approach

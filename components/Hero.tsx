@@ -11,25 +11,19 @@ export default function Hero() {
         Jose Antonio Licon · Pittsburgh, PA
       </p>
       <h1 className="text-4xl md:text-5xl font-medium leading-tight tracking-tight text-white mb-8">
-        One person.<br />
-        Many very different projects.<br />
-        One engine.<br />
-        Shipping constantly.
+        Working software in days,<br className="hidden md:inline" />{' '}
+        not quarters.
       </h1>
       <p className="text-base text-zinc-400 max-w-xl leading-relaxed mb-10">
-        I build apps, games, and platforms — powered by an AI development system I built myself.
-        Product manager and engineer,{' '}
-        <a href="#contact" className="text-zinc-200 underline decoration-zinc-600 underline-offset-4 hover:decoration-zinc-300">
-          open to consulting
-        </a>
-        .
+        ProjectsDash went from an idea to working software in three days. I build apps and internal tools for
+        founders and executives with an AI system I built myself.
       </p>
       <div className="flex flex-wrap gap-3">
         <a
-          href="#contact"
+          href="#contact-form"
           className="text-sm font-medium bg-white text-gray-900 px-5 py-2 rounded-md hover:bg-zinc-200 transition-colors"
         >
-          Get more from AI →
+          Tell me what you&apos;re building →
         </a>
         <a
           href="#projects"
