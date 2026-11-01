@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import NextStep from '@/components/NextStep';
 import ProjectGallery from '@/components/ProjectGallery';
 import ProjectActions from '@/components/ProjectActions';
 import YouTubeFacade from '@/components/YouTubeFacade';
@@ -141,13 +142,15 @@ export default async function ProjectPage({ params }: Props) {
         <p className="text-sm text-zinc-300 leading-relaxed max-w-md">
           <TermText text={xanaduLine(project)} allowed={XANADU_LINE_TERMS} seen={new Set()} dark />
         </p>
-        <Link
-          href="/#contact"
+        <a
+          href="#next-step"
           className="text-sm font-medium bg-white text-gray-900 hover:bg-zinc-200 transition-colors px-4 py-2 rounded-md whitespace-nowrap"
         >
-          Get more from AI →
-        </Link>
+          Tell me what you&apos;re building →
+        </a>
       </aside>
+
+      <NextStep source={`project:${project.slug}`} />
 
       <nav aria-label="More projects" className="border-t border-gray-100 py-8 flex justify-between gap-4 text-sm">
         <Link href={`/projects/${prev.slug}`} className="text-gray-600 hover:text-gray-900 transition-colors">

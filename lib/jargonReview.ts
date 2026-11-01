@@ -90,6 +90,8 @@ export const COPY_FILES: string[] = [
   'app/privacy/page.tsx',
   'app/process/page.tsx',
   'app/not-found.tsx',
+  'components/ContactForm.tsx',
+  'components/NextStep.tsx',
 ];
 export const NOT_COPY_FILES: Record<string, string> = {
   'app/layout.tsx': 'page frame and metadata, no visible copy',

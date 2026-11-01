@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<!-- Not a page: the blueprint Netlify Forms detects at deploy. components/ContactForm.tsx posts here and
+     must keep the same form name and field names. -->
+<html>
+  <body>
+    <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+      <input type="hidden" name="form-name" value="contact" />
+      <input name="bot-field" />
+      <input name="source" />
+      <input name="name" />
+      <input name="email" type="email" />
+      <textarea name="message"></textarea>
+    </form>
+  </body>
+</html>

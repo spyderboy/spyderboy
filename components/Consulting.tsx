@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { CONTACT } from '@/lib/constants';
 import BookButton from './BookButton';
+import ContactForm from './ContactForm';
 import Term from '@/components/Term';
 
 const OFFERS = [
@@ -145,11 +146,21 @@ export default function Consulting() {
           </Link>
         </p>
 
-        <div className="flex flex-wrap items-center gap-4 mt-8">
-          <BookButton className="text-sm font-medium bg-white text-gray-900 hover:bg-zinc-200 transition-colors px-5 py-2.5 rounded-md">
-            Book a 30-minute call
+        <div className="mt-10 border-t border-zinc-800 pt-8">
+          <h3 className="text-lg font-medium text-white tracking-tight mb-2">Start with a few lines.</h3>
+          <p className="text-sm text-zinc-400 leading-relaxed max-w-xl mb-6">
+            Tell me what you&apos;re trying to build or what&apos;s stuck. I&apos;ll reply with how I&apos;d approach
+            it and a rough size — no call, no commitment.
+          </p>
+          <ContactForm dark source="home" />
+        </div>
+
+        <div className="flex flex-wrap items-center gap-4 mt-8 text-sm">
+          <span className="text-zinc-400">Prefer to talk?</span>
+          <BookButton className="font-medium text-white hover:text-zinc-300 transition-colors">
+            Book a 30-minute call →
           </BookButton>
-          <a href={mailto} className="text-sm text-zinc-400 hover:text-zinc-100 transition-colors">
+          <a href={mailto} className="text-zinc-400 hover:text-zinc-100 transition-colors">
             or email {CONTACT.email}
           </a>
         </div>

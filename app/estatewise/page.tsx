@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
-import BookButton from '@/components/BookButton';
+import NextStep from '@/components/NextStep';
 import Walkthrough, { type WalkthroughSlide, type WalkthroughScreen } from '@/components/Walkthrough';
 import { SITE } from '@/lib/constants';
 
@@ -247,21 +247,7 @@ export default function EstateWisePage() {
           <span className="text-xs text-gray-500">18 pages, to read offline or share with your team.</span>
         </div>
         <Walkthrough slides={SLIDES} />
-        <div className="mt-16 rounded-xl border border-gray-100 p-6 flex flex-wrap items-center justify-between gap-4">
-          <p className="text-sm text-gray-600">Need a tool like this built for your own business?</p>
-          <div className="flex flex-wrap items-center gap-3">
-            <a
-              href="/downloads/EstateWise-walkthrough.pdf"
-              download
-              className="text-sm rounded-lg border border-gray-200 px-4 py-2 text-gray-900 hover:border-gray-400 transition-colors"
-            >
-              Walkthrough PDF ↓
-            </a>
-            <BookButton className="text-sm rounded-lg bg-gray-900 px-4 py-2 text-white hover:bg-gray-700 transition-colors">
-              Book a call
-            </BookButton>
-          </div>
-        </div>
+        <NextStep source="estatewise" heading="Need a tool like this built for your own business?" />
       </article>
       <Footer />
     </main>

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
+import NextStep from '@/components/NextStep';
 import { SITE } from '@/lib/constants';
 import { CATEGORIES, GLOSSARY, GLOSSARY_BY_ID } from '@/lib/glossary';
 
@@ -79,6 +80,7 @@ export default function JargonPage() {
             </section>
           );
         })}
+        <NextStep source="jargon" heading="Want this kind of plain talk on your own project?" />
       </article>
       <Footer />
     </main>

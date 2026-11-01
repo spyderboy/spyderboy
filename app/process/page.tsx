@@ -3,7 +3,7 @@ import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import Term from '@/components/Term';
-import BookButton from '@/components/BookButton';
+import NextStep from '@/components/NextStep';
 import { CONTACT, SITE } from '@/lib/constants';
 
 export const metadata: Metadata = {
@@ -216,14 +216,7 @@ export default function ProcessPage() {
           Jose Antonio Licon · {CONTACT.email} · spyderboy.com/process
         </p>
 
-        <div className="flex flex-wrap items-center gap-4 mt-12 print:hidden">
-          <BookButton className="text-sm font-medium bg-gray-900 text-white hover:bg-gray-700 transition-colors px-5 py-2.5 rounded-md">
-            Book a 30-minute call
-          </BookButton>
-          <Link href="/#contact" className="text-sm text-gray-500 hover:text-gray-900 transition-colors">
-            or see the consulting offers
-          </Link>
-        </div>
+        <NextStep source="process" heading="Want to see how this would work for you?" />
       </article>
       <div className="print:hidden">
         <Footer />
