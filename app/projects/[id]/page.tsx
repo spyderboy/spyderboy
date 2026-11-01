@@ -4,6 +4,7 @@ import { notFound } from 'next/navigation';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import NextStep from '@/components/NextStep';
+import StatCard from '@/components/StatCard';
 import ProjectGallery from '@/components/ProjectGallery';
 import ProjectActions from '@/components/ProjectActions';
 import YouTubeFacade from '@/components/YouTubeFacade';
@@ -103,6 +104,17 @@ export default async function ProjectPage({ params }: Props) {
           <p className="text-[15px] text-gray-700 leading-relaxed mt-8">
             <TermText text={project.description} allowed={terms} seen={seen} />
           </p>
+        )}
+
+        {project.numbers.length > 0 && (
+          <>
+            <h2 className="text-xs text-gray-500 uppercase tracking-widest mt-10 mb-4 font-normal">By the numbers</h2>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3">
+              {project.numbers.map((n) => (
+                <StatCard key={n.label} value={n.value} label={n.label} />
+              ))}
+            </div>
+          </>
         )}
 
         {project.features.length > 0 && (

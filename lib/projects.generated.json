@@ -10,6 +10,7 @@
       "Runs unattended overnight, and picks up where it left off if it's stopped",
       "Comes back with a finished roadmap or a short list of decisions for a human"
     ],
+    "numbers": [],
     "tags": [
       "Python",
       "Anthropic API",
@@ -60,6 +61,7 @@
       "Every change recorded: who made it, when, and what it was before",
       "Built in planned stages, each a written spec and a test for every step, so progress is visible and checkable"
     ],
+    "numbers": [],
     "tags": [
       "Flutter",
       "Firebase"
@@ -128,6 +130,7 @@
       "Plays offline: no ads, no in-app purchases, no internet permission",
       "iOS, Android, and an in-browser build"
     ],
+    "numbers": [],
     "tags": [
       "Flutter",
       "Firebase",
@@ -184,6 +187,7 @@
       "Magic Hat: a store of common tasks, pre-filled and estimated, added in one click",
       "AI-suggested scores and objectives, in your own language"
     ],
+    "numbers": [],
     "tags": [
       "Next.js",
       "React",
@@ -251,6 +255,7 @@
       "Cloud sync, preset pack import, and a listening leaderboard",
       "iOS and Android"
     ],
+    "numbers": [],
     "tags": [
       "Flutter",
       "Firebase Cloud Functions",
@@ -309,6 +314,7 @@
       "Resource directory for emergency and crisis support",
       "Community events with search, filters, and list or calendar views"
     ],
+    "numbers": [],
     "tags": [
       "Flutter",
       "Firebase",
@@ -348,6 +354,85 @@
     ]
   },
   {
+    "id": "wtf-tracker",
+    "name": "WTF Tracker",
+    "status": "Coming to Google Play",
+    "tagline": "Log the things that keep going wrong, see which ones to fix first, and get a little attitude about it. From the first written plan to a working app in two days.",
+    "description": "A WTF is a moment that makes you say \"WTF?\": the printer that jams every week, the meeting with no agenda, the\npharmacy that lost a refill. Log one in seconds, tap \"It happened again\" each time it repeats, and the app ranks\nwhat to fix first by how bad and how often. A bell with some attitude tells you when to let something go and when\nto fix it for good, with a \"Keep it clean\" switch. Your list is private: it is never shared, and the analytics\nnever see what you wrote. I wrote the plan and the tests, Xanadu built every screen, and the app is on its way to\nGoogle Play.",
+    "features": [
+      "Log a WTF in seconds; a title is all it takes",
+      "\"It happened again\" is one tap, so the list shows what keeps happening",
+      "Ranked by how bad and how often, so the daily annoyance outranks the one-off crisis",
+      "A bell with attitude: let the small stuff go, fix the big repeat offenders for good",
+      "A dashboard by week, month or year: where they came from, what got fixed, avoided or warned about",
+      "Private by design: your list is never shared, and you can delete your account and everything in it"
+    ],
+    "numbers": [
+      {
+        "value": "2 days",
+        "label": "from the first written plan to a working app on the web"
+      },
+      {
+        "value": "73",
+        "label": "tasks, every one built by Xanadu"
+      },
+      {
+        "value": "93%",
+        "label": "built right on the first try"
+      },
+      {
+        "value": "5 hours",
+        "label": "for Xanadu to build the whole app"
+      },
+      {
+        "value": "174",
+        "label": "automatic checks that prove it works"
+      },
+      {
+        "value": "4,292",
+        "label": "lines of app code"
+      }
+    ],
+    "tags": [
+      "Flutter",
+      "Firebase"
+    ],
+    "languages": [
+      "Dart"
+    ],
+    "xanaduTasks": 73,
+    "liveUrl": null,
+    "appStore": null,
+    "playStore": null,
+    "storeLabel": null,
+    "cta": null,
+    "download": null,
+    "highlight": null,
+    "demoVideo": null,
+    "screenshots": [
+      {
+        "src": "/images/projects/wtf-tracker/01.jpg",
+        "caption": "The list, one WTF, the bell and the dashboard"
+      },
+      {
+        "src": "/images/projects/wtf-tracker/02.jpg",
+        "caption": "Your WTFs, worst first"
+      },
+      {
+        "src": "/images/projects/wtf-tracker/03.jpg",
+        "caption": "One WTF and every time it happened"
+      },
+      {
+        "src": "/images/projects/wtf-tracker/04.jpg",
+        "caption": "The bell: real talk about your WTFs"
+      },
+      {
+        "src": "/images/projects/wtf-tracker/05.jpg",
+        "caption": "The year in WTFs"
+      }
+    ]
+  },
+  {
     "id": "witches-bricks",
     "name": "Witch's Bricks",
     "status": "In development",
@@ -360,6 +445,7 @@
       "One action per turn, answered by the AI opponent",
       "Built spec-first by Xanadu: a normative spec with a conformance test suite"
     ],
+    "numbers": [],
     "tags": [
       "Flutter"
     ],
@@ -408,6 +494,7 @@
       "Editable stack, repo, hosting and ops commands, written back to each project",
       "Marketing vault with a drag-to-reorder screenshot gallery"
     ],
+    "numbers": [],
     "tags": [
       "Next.js",
       "React",

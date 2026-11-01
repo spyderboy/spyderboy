@@ -16,6 +16,7 @@ export interface Project {
   tagline: string;
   description: string;
   features: string[];
+  numbers: { value: string; label: string }[]; // "By the numbers" from PROJECT.md: how it was built
   tags: string[];
   languages: string[]; // detected from the repo by the export, largest first
   xanaduTasks: number; // finished Xanadu tasks from the project's velocity logs

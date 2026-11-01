@@ -8,6 +8,7 @@
 export const NOT_JARGON: Record<string, string> = {
   // Names
   ProjectsDash: 'a project on this site, with its own page',
+  WTF: "WTF Tracker's own word, explained in the first line of its description",
   LinkedIn: 'a company name',
   GitHub: 'a company name',
   YouTube: 'a company name',

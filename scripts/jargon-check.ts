@@ -53,7 +53,7 @@ for (const p of projects) {
       problems.push(`${where}: lib/projectTerms.ts names "${id}", which is not in the glossary`);
   }
   const reported = new Set<string>();
-  for (const text of [p.tagline, p.description, ...p.features]) {
+  for (const text of [p.tagline, p.description, ...p.features, ...(p.numbers ?? []).map((n) => n.label)]) {
     for (const piece of findTerms(text, ALL_IDS, new Set())) {
       if (typeof piece === 'string') continue;
       if (linked.includes(piece.id) || piece.id in skipped || reported.has(piece.id)) continue;
