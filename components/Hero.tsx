@@ -5,7 +5,7 @@ export default function Hero() {
   const thumbs = PROJECTS.filter((p) => p.screenshots[0]).map((p) => ({ src: p.screenshots[0]!.src, name: p.name }));
 
   return (
-    <section className="relative py-16 md:py-24">
+    <section className="relative py-16 md:pt-10 md:pb-24">
       <HeroShowcase thumbs={thumbs} />
       <p className="text-xs text-zinc-400 uppercase tracking-widest mb-8">
         Jose Antonio Licon · Pittsburgh, PA

@@ -21,7 +21,8 @@ export default function HeroShowcase({ thumbs }: { thumbs: HeroThumb[] }) {
   const next = thumbs[(index + 1) % thumbs.length]!;
 
   return (
-    <div className="group hidden md:block absolute right-0 top-8 w-[360px] h-[162px]">
+    // In the page flow, not positioned over it: pinned to the corner it sat on top of the headline.
+    <div className="group hidden md:block relative ml-auto mb-10 w-[360px] h-[162px]">
       <div
         key={index}
         aria-hidden
