@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 import CalEmbed from '@/components/CalEmbed';
+import ContactForm from '@/components/ContactForm';
 import { CAL_URL, CONTACT, SITE } from '@/lib/constants';
 import Term from '@/components/Term';
 
@@ -39,7 +40,7 @@ export default function BookPage() {
         <h1 className="text-3xl font-medium tracking-tight text-gray-900 mb-4">Book a 30-minute call.</h1>
         <p className="text-sm text-gray-600 leading-relaxed max-w-xl">
           Turning your <Term id="roadmap">roadmap</Term> into running software, or a measured AI{' '}
-          <Term id="pilot">pilot</Term> for your dev team. Pick a time that works — or{' '}
+          <Term id="pilot">pilot</Term> for your dev team. Pick a time that works, send a few lines with the form below, or{' '}
           <a href={mailto} className="font-medium text-gray-900 hover:text-gray-600 transition-colors">
             email {CONTACT.email}
           </a>
@@ -60,6 +61,15 @@ export default function BookPage() {
           </Link>
           .
         </p>
+      </section>
+
+      <section className="pb-12 border-t border-gray-100 pt-8">
+        <h2 className="text-lg font-medium text-gray-900 tracking-tight mb-2">Not ready for a call?</h2>
+        <p className="text-sm text-gray-600 leading-relaxed max-w-xl mb-6">
+          Tell me what you&apos;re building in a few lines. I&apos;ll reply by email with how I&apos;d approach it and
+          a rough size.
+        </p>
+        <ContactForm source="book" />
       </section>
 
       <Footer />
