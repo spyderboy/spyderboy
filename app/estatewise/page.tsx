@@ -82,7 +82,7 @@ const SLIDES: WalkthroughSlide[] = [
     title: 'An apartment',
     body: 'Everything about one unit on one page.',
     points: [
-      'Current rent and this month’s rent status at the top, with floor, bedrooms and key colour.',
+      'Current rent and this month’s rent status at the top, with floor, bedrooms and key color.',
       'Who lives here: the current residents, a Move out button for each, and Move in for someone new.',
       'The lease dates and security deposit, the unit’s repairs and rent history, and its photos.',
       'The unit’s own timeline, and charts of rent and repair costs.',
@@ -95,7 +95,7 @@ const SLIDES: WalkthroughSlide[] = [
     body: 'The everyday entry screens, reached from an apartment.',
     points: [
       'Record a payment: amount, date and how it was paid (check, cash, money order, Venmo, Cash App).',
-      'Edit the unit: number, floor, bedrooms, deposit, lease dates and key colour.',
+      'Edit the unit: number, floor, bedrooms, deposit, lease dates and key color.',
       'Appliances: the stove, fridge, water heater and the rest in each unit, with age and condition.',
     ],
     screens: [
@@ -190,7 +190,7 @@ const SLIDES: WalkthroughSlide[] = [
     body: 'Every repair across all buildings, from planned to done.',
     points: [
       'Spending on repairs month by month, then every repair with contractor, cost and status.',
-      'A repair’s page splits parts from labour and shows when it was planned, started and finished.',
+      'A repair’s page splits parts from labor and shows when it was planned, started and finished.',
     ],
     screens: [screen('repairs', 'All repairs', 1123), screen('repair', 'One repair'), screen('repair_form', 'New repair')],
   },

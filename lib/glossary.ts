@@ -102,7 +102,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     category: 'ai',
     short:
       'A rough measure of a model’s size. "27B" means 27 billion parameters: bigger is usually smarter, but needs more memory and runs slower.',
-    body: 'Parameters are the numbers a model learned during training. Their count is the usual shorthand for size: a 27B model has 27 billion of them and fits in the memory of a well-equipped laptop. Frontier models are far larger and need data centres.',
+    body: 'Parameters are the numbers a model learned during training. Their count is the usual shorthand for size: a 27B model has 27 billion of them and fits in the memory of a well-equipped laptop. Frontier models are far larger and need data centers.',
     related: ['open-model', 'gpu'],
   },
   {
@@ -118,7 +118,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     aliases: ['GPUs', 'GPU'],
     term: 'GPU',
     category: 'ai',
-    short: 'The kind of chip AI models run fastest on. Data centres rent them by the hour.',
+    short: 'The kind of chip AI models run fastest on. Data centers rent them by the hour.',
     body: 'Graphics processing unit: originally for drawing video-game graphics, now the workhorse of AI because it does many small calculations at once. A large model runs far faster on a GPU with plenty of memory.',
     related: ['runpod', 'parameters'],
   },
@@ -190,7 +190,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     term: 'Backlog',
     category: 'delivery',
     short: 'The list of work not done yet, in priority order.',
-    body: 'Everything a team intends to build but hasn’t, ordered so the most valuable work comes first. In Xanadu the backlog is the unticked part of the roadmap.',
+    body: 'Everything a team intends to build but hasn’t, ordered so the most valuable work comes first. In Xanadu the backlog is the unchecked part of the roadmap.',
     related: ['roadmap', 'agile'],
   },
   {
@@ -398,7 +398,7 @@ export const GLOSSARY: GlossaryEntry[] = [
     category: 'delivery',
     short:
       'Tests written around existing code first, so any later change that breaks how it behaves today is caught at once.',
-    body: 'Before modernising old code, tests are written that pin down exactly what it does now, quirks included. Then every change, by a person or by the loop, has to keep those tests passing, so nothing the business relies on breaks unnoticed.',
+    body: 'Before modernizing old code, tests are written that pin down exactly what it does now, quirks included. Then every change, by a person or by the loop, has to keep those tests passing, so nothing the business relies on breaks unnoticed.',
     related: ['tests', 'gate'],
   },
 

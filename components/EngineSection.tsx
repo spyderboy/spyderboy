@@ -57,7 +57,7 @@ export default function EngineSection() {
       <p className="text-xs text-gray-500 uppercase tracking-widest mb-6">The engine</p>
       <h2 className="text-2xl font-medium text-gray-900 mb-4">Xanadu</h2>
       <p className="text-sm text-gray-600 leading-relaxed max-w-xl mb-8">
-        An <Term id="autonomous-loop">autonomous development loop</Term> that compresses two weeks of work into two days
+        An <Term id="autonomous-loop">autonomous development loop</Term>{' '}that compresses two weeks of work into two days
         of wall-clock time. Here&apos;s how it works.
       </p>
 

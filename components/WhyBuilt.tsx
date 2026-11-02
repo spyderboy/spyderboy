@@ -18,12 +18,12 @@ export default function WhyBuilt() {
             What began as a workaround turned into something more interesting: a complete development loop. Product
             ideation. <Term id="swot">SWOT</Term> analysis. <Term id="backlog">Backlog</Term> generation. Code execution
             across <Term id="parallel-workers">parallel workers</Term>. Models that fail over to more capable{' '}
-            <Term id="ladder">tiers</Term> when a task is too hard. Error patterns that get learned and encoded so they
+            <Term id="ladder">tiers</Term>{' '}when a task is too hard. Error patterns that get learned and encoded so they
             don&apos;t burn retries twice.
           </p>
           <p>
             Now I set it running overnight. By morning, the project is mostly done. When I need more firepower, I spin
-            up <Term id="runpod">RunPod</Term> and the backlog burns down in parallel, at a cost that doesn&apos;t
+            up <Term id="runpod">RunPod</Term>{' '}and the backlog burns down in parallel, at a cost that doesn&apos;t
             require a VC.
           </p>
           <p>

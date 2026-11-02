@@ -84,7 +84,7 @@ export default function PrivacyPage() {
 
         <Section title="Email, the contact form and hosting">
           <p>
-            If you email {CONTACT.email} or use the short &ldquo;Send&rdquo; form, I use your name, email and message
+            If you email {CONTACT.email}{' '}or use the short &ldquo;Send&rdquo; form, I use your name, email and message
             only to reply. Form messages are received and stored by Netlify Forms until I delete them. The site is hosted on Netlify, which keeps
             standard server logs (such as <Term id="ip-address">IP address</Term> and pages requested) to run and secure
             the service.

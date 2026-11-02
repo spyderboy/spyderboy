@@ -85,6 +85,18 @@ for (const f of tsx) {
   }
 }
 
+// The compiler drops the space after a closing tag or a {value} when the text that follows runs onto another line and holds
+// an entity (&apos;): "loop</Term> that … Here&apos;s" rendered as "loopthat". Such a space must be {' '}.
+for (const f of tsx) {
+  const src = fs.readFileSync(path.join(ROOT, f), 'utf8');
+  for (const m of src.matchAll(/(<\/[A-Za-z.]+>|\{[A-Za-z_.]+\}) ([^<{]*)/g)) {
+    if (m[2]!.includes('\n') && /&[a-z]+;/.test(m[2]!)) {
+      const line = src.slice(0, m.index).split('\n').length;
+      problems.push(`${f}:${line}: the space after ${m[1]} is lost in the page — write ${m[1]}{' '} instead`);
+    }
+  }
+}
+
 // The words a visitor reads: JSX text and prose string literals, without attributes, code or comments.
 function visibleText(src: string): string {
   const s = src
