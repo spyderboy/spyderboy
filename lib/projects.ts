@@ -41,6 +41,7 @@ export const PROJECTS: Project[] = generated.map((p) => ({ ...p, slug: slugify(p
 export function getStatusClasses(status: string): { bg: string; text: string } {
   switch (status) {
     case 'Live':
+    case 'Free on the web':
       return { bg: 'bg-green-100', text: 'text-green-800' };
     case 'Beta':
       return { bg: 'bg-amber-100', text: 'text-amber-800' };

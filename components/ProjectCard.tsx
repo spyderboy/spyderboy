@@ -3,6 +3,7 @@ import { Project, getStatusClasses } from '@/lib/projects';
 import ProjectGallery from './ProjectGallery';
 import ProjectActions from './ProjectActions';
 import ProjectTags from './ProjectTags';
+import ProjectNumbers from './ProjectNumbers';
 
 // Compact home-page card; the description, features and demo video live on /projects/<id>.
 export default function ProjectCard({ project }: { project: Project }) {
@@ -27,6 +28,12 @@ export default function ProjectCard({ project }: { project: Project }) {
         </span>
       </div>
       <p className="text-sm text-gray-600 leading-relaxed mb-4">{project.tagline}</p>
+
+      {project.numbers.length > 0 && (
+        <div className="mb-4">
+          <ProjectNumbers numbers={project.numbers.slice(0, 3)} compact />
+        </div>
+      )}
 
       <ProjectGallery name={project.name} screenshots={project.screenshots} />
 

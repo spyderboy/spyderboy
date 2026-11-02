@@ -356,9 +356,9 @@
   {
     "id": "wtf-tracker",
     "name": "WTF Tracker",
-    "status": "Coming to Google Play",
-    "tagline": "Log the things that keep going wrong, see which ones to fix first, and get a little attitude about it. From the first written plan to a working app in two days.",
-    "description": "A WTF is a moment that makes you say \"WTF?\": the printer that jams every week, the meeting with no agenda, the\npharmacy that lost a refill. Log one in seconds, tap \"It happened again\" each time it repeats, and the app ranks\nwhat to fix first by how bad and how often. A bell with some attitude tells you when to let something go and when\nto fix it for good, with a \"Keep it clean\" switch. Your list is private: it is never shared, and the analytics\nnever see what you wrote. I wrote the plan and the tests, Xanadu built every screen, and the app is on its way to\nGoogle Play.",
+    "status": "Free on the web",
+    "tagline": "Log the things that keep going wrong, see which ones to fix first, and get a little attitude about it.",
+    "description": "A WTF is a moment that makes you say \"WTF?\": the printer that jams every week, the meeting with no agenda, the\npharmacy that lost a refill. Log one in seconds, tap \"It happened again\" each time it repeats, and the app ranks\nwhat to fix first by how bad and how often. A bell with some attitude tells you when to let something go and when\nto fix it for good, with a \"Keep it clean\" switch. Your list is private: it is never shared, and the analytics\nnever see what you wrote. I wrote the plan and the tests, and Xanadu built every screen. It is free on the web, and\ncoming soon to iOS and Android.",
     "features": [
       "Log a WTF in seconds; a title is all it takes",
       "\"It happened again\" is one tap, so the list shows what keeps happening",
@@ -370,7 +370,7 @@
     "numbers": [
       {
         "value": "2 days",
-        "label": "from the first written plan to a working app on the web"
+        "label": "from first plan to a working app"
       },
       {
         "value": "73",
@@ -382,7 +382,7 @@
       },
       {
         "value": "5 hours",
-        "label": "for Xanadu to build the whole app"
+        "label": "for Xanadu to build it all"
       },
       {
         "value": "174",
@@ -404,8 +404,11 @@
     "liveUrl": null,
     "appStore": null,
     "playStore": null,
-    "storeLabel": null,
-    "cta": null,
+    "storeLabel": "iOS and Android coming soon",
+    "cta": {
+      "label": "Try it free on the web",
+      "url": "https://wtf-tracker-spyderboy.netlify.app"
+    },
     "download": null,
     "highlight": null,
     "demoVideo": null,

@@ -42,7 +42,7 @@ export default function ProjectActions({ project }: { project: Project }) {
           {project.download.label} ↓
         </a>
       )}
-      {project.storeLabel && (project.appStore || project.playStore) && (
+      {project.storeLabel && (
         <span className="text-[13px] text-gray-500">{project.storeLabel}</span>
       )}
       {/* Official badges, unaltered (Google's transparent padding trimmed), both 40px tall. */}

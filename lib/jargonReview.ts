@@ -75,6 +75,7 @@ export const NOT_JARGON: Record<string, string> = {
 // Files whose text is site copy, checked for terms and possible jargon. Every .tsx file under components/ and
 // app/ must be in COPY_FILES or NOT_COPY_FILES, so a new file gets a decision.
 export const COPY_FILES: string[] = [
+  'components/ProjectNumbers.tsx',
   'app/estatewise/page.tsx',
   'components/Walkthrough.tsx',
   'components/Hero.tsx',
