@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   alternates: { canonical: `${SITE.url}/privacy` },
 };
 
-const UPDATED = '2026-09-27';
+const UPDATED = '2026-11-03';
 
 function Section({ title, children }: { title: string; children: React.ReactNode }) {
   return (
@@ -91,8 +91,17 @@ export default function PrivacyPage() {
           </p>
         </Section>
 
+        <Section title="LinkedIn ads and lead forms">
+          <p>
+            I advertise on LinkedIn. If you send a LinkedIn lead form from one of my ads, LinkedIn passes me what the form
+            shows you before you send it: your name, email, company and job title, plus your answer to any question on
+            the form. I use it only to reply to you, and I delete it when you ask. LinkedIn&apos;s own handling of your
+            data is covered by its privacy policy. This site doesn&apos;t use the LinkedIn Insight Tag.
+          </p>
+        </Section>
+
         <Section title="What I don't do">
-          <p>No advertising, no selling or sharing your information, and no account or sign-up on this site.</p>
+          <p>No ads on this site, no selling or sharing your information, and no account or sign-up.</p>
         </Section>
 
         <Section title="Questions or requests">
