@@ -121,7 +121,20 @@ export default function Consulting() {
           </p>
         </div>
 
-        <div className="flex flex-col gap-3 mt-8">
+        <Link
+          href="/backlog"
+          className="block mt-8 rounded-xl bg-white p-5 hover:bg-zinc-100 transition-colors"
+        >
+          <p className="text-xs text-gray-500 uppercase tracking-widest mb-2">Start here · two weeks · $5,000</p>
+          <h3 className="text-[17px] font-medium text-gray-900 leading-snug mb-2">Your backlog, cut down and shipped</h3>
+          <p className="text-sm text-gray-600 leading-relaxed">
+            Every item marked build, cut or defer, the top of it built and tested in your repository, and the numbers to
+            judge it by. Your code never goes to an AI company.
+          </p>
+          <span className="inline-block mt-3 text-sm font-medium text-gray-900">What you get →</span>
+        </Link>
+
+        <div className="flex flex-col gap-3 mt-3">
           {OFFERS.map((o) => (
             <div key={o.who} className="rounded-xl border border-zinc-800 p-5">
               <p className="text-xs text-zinc-400 uppercase tracking-widest mb-2">{o.who}</p>

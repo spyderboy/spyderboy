@@ -10,6 +10,7 @@ export const NOT_JARGON: Record<string, string> = {
   ProjectsDash: 'a project on this site, with its own page',
   WTF: "WTF Tracker's own word, explained in the first line of its description",
   LinkedIn: 'a company name',
+  OpenAI: 'a company name, introduced as "an AI company like OpenAI"',
   GitHub: 'a company name',
   YouTube: 'a company name',
   'Cal.com': 'the booking service, named where it is used',
@@ -75,6 +76,7 @@ export const NOT_JARGON: Record<string, string> = {
 // Files whose text is site copy, checked for terms and possible jargon. Every .tsx file under components/ and
 // app/ must be in COPY_FILES or NOT_COPY_FILES, so a new file gets a decision.
 export const COPY_FILES: string[] = [
+  'app/backlog/page.tsx',
   'components/ProjectNumbers.tsx',
   'app/estatewise/page.tsx',
   'components/Walkthrough.tsx',

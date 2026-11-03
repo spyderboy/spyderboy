@@ -2,7 +2,7 @@ import type { MetadataRoute } from 'next';
 import { SITE } from '@/lib/constants';
 import { PROJECTS } from '@/lib/projects';
 
-// Home, /book, /process, /jargon, /estatewise, and one page per project (each with its screenshots for image search).
+// Home, /backlog, /book, /process, /jargon, /estatewise, and one page per project (each with its screenshots for image search).
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
       images: PROJECTS.flatMap((p) => p.screenshots.map((s) => `${SITE.url}${s.src}`)),
     },
+    { url: `${SITE.url}/backlog`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE.url}/book`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
     { url: `${SITE.url}/process`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${SITE.url}/jargon`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.5 },
