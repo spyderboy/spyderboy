@@ -6,12 +6,12 @@ import Term from '@/components/Term';
 import NextStep from '@/components/NextStep';
 import { SITE } from '@/lib/constants';
 
-// The entry offer: two weeks, a fixed price, a verdict on the backlog and the top of it built. Linked from the home
-// page's Consulting section; the one to send people to from outreach and posts.
+// The entry offer: one week, $5,000, framed as a demonstration — real backlog items done in the client's own code.
+// Linked from the home page's Consulting section; the page to send people to from outreach and posts.
 
-const title = `Your backlog, cut down and shipped — ${SITE.name}`;
+const title = `Real results in your repo by Friday — ${SITE.name}`;
 const description =
-  'Two weeks, $5,000: every backlog item marked build, cut or defer, the top of it built and tested in your repository, and the numbers to judge it by.';
+  'What can $5,000 get you? One week: a verdict on your backlog, three to five items built and tested in your own code, and the numbers to judge it by.';
 
 export const metadata: Metadata = {
   title,
@@ -23,34 +23,30 @@ export const metadata: Metadata = {
 
 const STEPS = [
   {
-    when: 'Days 1–3',
     title: 'A verdict on your backlog',
     body: (
       <>
-        Every item in your <Term id="backlog">backlog</Term> marked build, cut or defer, each with a one-line reason.
-        Most backlogs hold work that shouldn’t be built at all. Finding it can be worth the fee on its own.
+        Every item in your <Term id="backlog">backlog</Term> marked build, cut or defer, with a one-line reason. Most
+        backlogs hold work that shouldn’t be built at all.
       </>
     ),
   },
   {
-    when: 'Days 4–12',
-    title: 'The top of it, built',
+    title: 'Real items, done',
     body: (
       <>
-        Working code delivered to your repository, each change with <Term id="tests">tests</Term> that prove it works,
-        and reviewed by me before it reaches you. You see progress every day.
+        Three to five items from the top, built in your own code, each with <Term id="tests">tests</Term> that prove it
+        works, and reviewed by me before it reaches you.
       </>
     ),
   },
   {
-    when: 'Day 14',
     title: 'The numbers',
-    body: 'What was built, how much of it passed its tests on the first try, the hours it took, and what your team had estimated for the same work.',
+    body: 'What was built, how much passed its tests on the first try, how long it took, and what your team had estimated for the same work.',
   },
   {
-    when: 'After',
-    title: 'Your call',
-    body: 'Keep me on, take the plan in-house, or stop there. You keep the code and the plan either way.',
+    title: 'What a month would look like',
+    body: 'If you like what you see, we keep going at a rate based on what the week showed. If not, you keep everything and we part friends.',
   },
 ];
 
@@ -60,10 +56,11 @@ export default function BacklogPage() {
       <Nav />
 
       <section className="pt-10 pb-10">
-        <p className="text-xs text-gray-500 uppercase tracking-widest mb-6">Two weeks · $5,000</p>
-        <h1 className="text-3xl md:text-4xl font-medium tracking-tight text-gray-900 mb-6">
-          Your backlog, cut down and shipped.
+        <p className="text-xs text-gray-500 uppercase tracking-widest mb-6">What can $5,000 get you?</p>
+        <h1 className="text-3xl md:text-4xl font-medium tracking-tight text-gray-900 mb-4">
+          Real results in your repo by Friday.
         </h1>
+        <p className="text-lg text-gray-600 leading-relaxed mb-6">Give me one week and your backlog. I’ll show you.</p>
         <div className="space-y-4 text-[15px] text-gray-700 leading-relaxed max-w-xl">
           <p>
             Most teams aren’t short of ideas. They’re short of someone who can say which ones matter, and then get
@@ -83,13 +80,12 @@ export default function BacklogPage() {
       </section>
 
       <section className="border-t border-gray-100 py-10">
-        <h2 className="text-xs text-gray-500 uppercase tracking-widest mb-6 font-normal">In two weeks you get</h2>
+        <h2 className="text-xs text-gray-500 uppercase tracking-widest mb-6 font-normal">In one week you get</h2>
         <ol className="space-y-6">
           {STEPS.map((s, i) => (
             <li key={s.title} className="flex gap-4">
               <span className="text-sm font-medium text-gray-400 w-5 shrink-0">{i + 1}</span>
               <div>
-                <p className="text-xs text-gray-500 mb-1">{s.when}</p>
                 <h3 className="text-[15px] font-medium text-gray-900 mb-1">{s.title}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed max-w-xl">{s.body}</p>
               </div>
@@ -100,18 +96,17 @@ export default function BacklogPage() {
 
       <section className="border-t border-gray-100 py-10 grid gap-6 md:grid-cols-2">
         <div>
-          <h2 className="text-[15px] font-medium text-gray-900 mb-2">Your code stays private</h2>
+          <h2 className="text-[15px] font-medium text-gray-900 mb-2">No codebase yet? That’s fine.</h2>
           <p className="text-sm text-gray-600 leading-relaxed">
-            It is never sent to an AI company like OpenAI or Anthropic. The work runs on{' '}
-            <Term id="open-model">open models</Term> on my own machine. If you want results faster, I can add private
-            rented <Term id="gpu">GPUs</Term>, only if you agree. Nothing is used to train anyone’s AI.
+            Access to your code is the fastest start. If you’re building something new, user stories are enough: you
+            get working software built from them, in a repository that’s yours.
           </p>
         </div>
         <div>
-          <h2 className="text-[15px] font-medium text-gray-900 mb-2">You don’t take my word for it</h2>
+          <h2 className="text-[15px] font-medium text-gray-900 mb-2">Your code stays private</h2>
           <p className="text-sm text-gray-600 leading-relaxed">
-            Every change comes with tests that prove it works, and you see every change before it’s yours. The numbers
-            on day 14 come from the work itself, not from a slide.
+            It is never sent to an AI company like OpenAI or Anthropic. The work runs on{' '}
+            <Term id="open-model">open models</Term> on my own machine. Nothing is used to train anyone’s AI.
           </p>
         </div>
       </section>
@@ -138,6 +133,13 @@ export default function BacklogPage() {
           <Link href="/process" className="font-medium text-gray-900 hover:text-gray-600">
             how I build software →
           </Link>
+        </p>
+      </section>
+
+      <section className="border-t border-gray-100 py-10">
+        <p className="text-2xl font-medium tracking-tight text-gray-900">One week. $5,000.</p>
+        <p className="text-sm text-gray-600 mt-2">
+          Half to start, half on delivery. The week starts once I have your code or your user stories.
         </p>
       </section>
 

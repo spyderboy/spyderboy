@@ -11,6 +11,7 @@ export const NOT_JARGON: Record<string, string> = {
   WTF: "WTF Tracker's own word, explained in the first line of its description",
   LinkedIn: 'a company name',
   OpenAI: 'a company name, introduced as "an AI company like OpenAI"',
+  Friday: 'a day of the week',
   GitHub: 'a company name',
   YouTube: 'a company name',
   'Cal.com': 'the booking service, named where it is used',
