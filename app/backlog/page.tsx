@@ -11,7 +11,7 @@ import { SITE } from '@/lib/constants';
 
 const title = `Real results in your repo by Friday — ${SITE.name}`;
 const description =
-  'What can $5,000 get you? One week: a verdict on your backlog, three to five items built and tested in your own code, and the numbers to judge it by.';
+  'What can $5,000 get you? One week: we sort your backlog together, I work through the top of it, and you get tested code in your own repo by Friday.';
 
 export const metadata: Metadata = {
   title,
@@ -26,17 +26,18 @@ const STEPS = [
     title: 'A verdict on your backlog',
     body: (
       <>
-        Every item in your <Term id="backlog">backlog</Term> marked build, cut or defer, with a one-line reason. Most
-        backlogs hold work that shouldn’t be built at all.
+        We go through your <Term id="backlog">backlog</Term> together, whatever state it’s in, and mark each item build,
+        cut or defer, with a one-line reason. Most backlogs hold work that shouldn’t be built at all.
       </>
     ),
   },
   {
-    title: 'Real items, done',
+    title: 'The top of it, done',
     body: (
       <>
-        Three to five items from the top, built in your own code, each with <Term id="tests">tests</Term> that prove it
-        works, and reviewed by me before it reaches you.
+        I work through the top of your backlog, as far as the week goes. Items are kept small enough to deliver, built in
+        your own code, each with <Term id="tests">tests</Term> that prove it works, and reviewed by me before it reaches
+        you.
       </>
     ),
   },
@@ -99,7 +100,7 @@ export default function BacklogPage() {
           <h2 className="text-[15px] font-medium text-gray-900 mb-2">No codebase yet? That’s fine.</h2>
           <p className="text-sm text-gray-600 leading-relaxed">
             Access to your code is the fastest start. If you’re building something new, user stories are enough: you
-            get working software built from them, in a repository that’s yours.
+            get working software built from them, in a repository that’s yours. I can help you write good ones, too.
           </p>
         </div>
         <div>

@@ -128,8 +128,8 @@ export default function Consulting() {
           <p className="text-xs text-gray-500 uppercase tracking-widest mb-2">Start here · one week · $5,000</p>
           <h3 className="text-[17px] font-medium text-gray-900 leading-snug mb-2">Real results in your repo by Friday</h3>
           <p className="text-sm text-gray-600 leading-relaxed">
-            A verdict on your whole backlog, three to five items built and tested in your own code, and the numbers to
-            judge it by. Your code never goes to an AI company.
+            We sort your backlog together, whatever state it&apos;s in, and I work through the top of it. You get tested
+            code in your own repo by Friday. Your code never goes to an AI company.
           </p>
           <span className="inline-block mt-3 text-sm font-medium text-gray-900">What you get →</span>
         </Link>
